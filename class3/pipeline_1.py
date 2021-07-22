@@ -3,7 +3,7 @@ import time
 
 # init data
 os.makedirs("data/", exist_ok=True)
-thread      = 30
+thread      = 20
 ref         = "data/GRCh38_latest_rna.fna"
 blast_ref   = "data/GRCh38_latest_rna.blast"
 image_blast = "quay.io/biocontainers/blast:2.9.0--pl526he19e7b1_7"
@@ -32,7 +32,7 @@ def getSample():
     return ["data/BLAST_sample_file"]
 
 
-def blastPre():
+def blastInit():
     docker_run(image_blast,
                f'time makeblastdb -dbtype nucl -parse_seqids '
                f'-in {ref} -out {blast_ref}')
@@ -67,11 +67,11 @@ def blastRun():
 
         # Connect to remote
         docker_run(image_blast,
-                   f'blastn -query {ref} -db nt -outfmt 1 -remote '
+                   f'blastn -query {ref} -db nt -outfmt 6 -remote -evalue 0.005'
                    f'-out {name}.blastn.2.txt')
 
 
 if __name__ == "__main__":
     download()
-    blastPre()
+    blastInit()
     blastRun()
