@@ -111,16 +111,16 @@ def deseqRun():
 
 
 if __name__ == "__main__":
-    # download()
-    # fastqc()
-    # trimmomatic()
+    download()
+    fastqc()
+    trimmomatic()
     suffix = ".clean"
-    # fastqc()
-    # hisatInit()
-    # hisatRun()
+    fastqc()
+    hisatInit()
+    hisatRun()
     suffix = ".clean.hisat"
-    # stringtieRun()
-    # gffcompareRun()
+    stringtieRun()
+    gffcompareRun()
     suffix = ".clean.hisat.stringtie.merge"
-    # stringtieAfter()
-    # deseqRun()
+    stringtieAfter()
+    deseqRun()
