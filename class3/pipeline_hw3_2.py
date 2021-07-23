@@ -1,38 +1,3 @@
-"""
-Homework3 Part 2
-
-Author: linnil1
-Command: python3 pipeline_hw.py
-Result:
-
-[Question 2] What is the file format that you download from "http://genomedata.org/rnaseq-tutorial/practical.tar"?
-FastQ
-[Question 3] What adaptor sequences that we use in Trimmomatic? Please click on two sequences.
->PrefixPE/1
-TACACTCTTTCCCTACACGACGCTCTTCCGATCT
->PrefixPE/2
-GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT
-[Question 4] After running Trimmomatic, what is the closest "first base" "mean" that shows in "FastQC_data" of hcc1395_normal_rep2_r1_clean_paired.fastq
-  #Base       Mean  Median  Lower Quartile  Upper Quartile  10th Percentile  90th Percentile
-  0     1  30.900412    32.0            32.0            32.0             27.0             32.0
-  1     2  31.509489    32.0            32.0            32.0             32.0             32.0
-  2     3  35.853593    37.0            37.0            37.0             32.0             37.0
-  3     4  36.370096    37.0            37.0            37.0             37.0             37.0
-  4     5  36.560014    37.0            37.0            37.0             37.0             37.0
-[Question 5] After processing "stringtie --merge", all the "gene_name and ref_gene_id" are in NC_000001.11 "except"?
-sys:1: DtypeWarning: Columns (5) have mixed types.Specify dtype option on import or set low_memory=False.
-PARK7 False
-ENO1 True
-MIR398 False
-RPL22 False
-[Question 7] After processing DESeq2, you can get "gene_diff.csv". What is the closest "padj" number of "rna-NM_000362.5" ?
-2.67085238337022e-13
-[Question 8] Please search "rna-NM_005318.4" gene in your DESeq2 output file (gene_diff.csv). Which part tissue express more "rna-NM_005318.4" ?
-tumor
-[Question 9] Which gene express more in normal than tumor
-Row.names         rna-XM_017029019.2
-log2FoldChange              -4.86086
-"""
 import io
 import gzip
 import zipfile

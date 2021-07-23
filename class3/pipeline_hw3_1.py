@@ -1,28 +1,3 @@
-"""
-Homework3 Part 1
-
-Author: linnil1
-Command: python3 pipeline_hw.py
-Result:
-
-[Question 2] What is the file format that you just download?
-Fasta
-[Question 3] Run "blastn" with "-evalue 0.0001" argument, how many targets gene did we find?
-303003
-[Question 4] From the result of Question 3, we can find out that "gene A" might refer to "XM_011518391".
-What is the "bit score" of "XM_011518391" when "evalue" = 0.0?
-10949.0
-[Question 5] From Question 3, how many "different" subject ID (subject acc.) did we get?
-2491
-[Question 6] From Question 3, what might be the "subject ID (subject acc.)" of gene Q?
-XM_024447382.1
-[Question 7] From Question 3, what is the gene name (query acc.) of "XM_011526256" in the file you download?
-['I', 'I', 'I', 'I', 'I']
-[Question 8] What is the beginning sequence of "XM_017025736" ?
-GCTTGGCGGAGGCGGGGAAGGCCCGCAGGCGGCGCCTCAGCCGGGGTTGGCGCTGAGGGGAGAGGGCGGGGAAAAGGTGG
-[Question 9] What is the gene function of "XM_017010807" ?
-PREDICTED: Homo sapiens major histocompatibility complex, class I, E (HLA-E), transcript variant X1, mRNA
-"""
 import pandas as pd
 from pipeline_1 import *
 
