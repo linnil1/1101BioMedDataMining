@@ -68,7 +68,8 @@ def hisatRun():
     for name in getSample():
         docker_run(image_hisat,
                    f"hisat2 -p {thread} --dta -x {folder_hisat} "
-                   f"-1 {name}_r1{suffix}.fastq.gz -2 {name}_r2{suffix}.fastq.gz "
+                   f"-1 {name}_r1{suffix}.fastq.gz "
+                   f"-2 {name}_r2{suffix}.fastq.gz "
                    f"-S {name}{suffix}.hisat.sam")
         docker_run(image_samtool,
                    f"samtools sort -@ {thread} "
@@ -101,7 +102,8 @@ def stringtieAfter():
     open(stringtie_list, "w").writelines(
         map(lambda i: f"{i}{suffix} {i}{suffix}.gff\n", getSample()))
     run(f"python3 prepDE.py -i {stringtie_list} "
-        f"-g {stringtie_merge}.result.gene.csv -t {stringtie_merge}.result.tx.csv")
+        f"-g {stringtie_merge}.result.gene.csv "
+        f"-t {stringtie_merge}.result.tx.csv")
 
 
 def deseqRun():

@@ -67,8 +67,8 @@ def blastRun():
 
         # Connect to remote
         docker_run(image_blast,
-                   f'blastn -query {ref} -db nt -outfmt 6 -remote -evalue 0.005'
-                   f'-out {name}.blastn.2.txt')
+                   f'blastn -query {ref} -db nt -remote -evalue 0.005 '
+                   f'-outfmt 6 -out {name}.blastn.2.txt')
 
 
 if __name__ == "__main__":

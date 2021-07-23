@@ -3,4 +3,4 @@ HW2/APTVCF0921_del_sort_norm_sample_wgstype_contig_sort.vcf
 .*.swp
 __pycache__/
 data/
-hisat/
+hisat2/
