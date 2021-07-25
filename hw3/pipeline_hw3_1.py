@@ -18,6 +18,10 @@ def blastRun():
                    f'blastn -task blastn -query {name}.fa -db {blast_ref} '
                    f'-evalue 0.0001 -num_threads {thread} -outfmt 6 '
                    f'-out {name}.blastn.txt')
+        # docker_run(image_blast,
+        #            f'blastn -task megablast -query {name}.fa -db {blast_ref} '
+        #            f'-evalue 0.0001 -num_threads {thread} -outfmt 6 '
+        #            f'-out {name}.megablast.txt')
 
 
 def determine_fastq(f):
