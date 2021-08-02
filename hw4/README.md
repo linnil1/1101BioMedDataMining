@@ -16,7 +16,7 @@ cifar10, first 10000 as training set
 Training a new model
 
 ``` bash
-python3 train.py
+python3 hw4.py
 ```
 
 ## Result
@@ -30,6 +30,7 @@ wget "https://drive.google.com/uc?export=download&id=15WD8h9Qm-VL1kYUKlFCL8oNqPN
 Calculate f1 and Confusion Matrix
 
 ``` bash
+python3 hw4_log.py 1627841832.8930326.log
 python3 hw4_evalute.py 1627841832.8930326
 ```
 
@@ -53,3 +54,4 @@ F1        0.8546072913161492
 ```
 
 ![Confusion Matrix](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw4/1627841832.8930326.confusion_matrix.png)
+![Loss and acc](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw4/1627841832.8930326.log.png)

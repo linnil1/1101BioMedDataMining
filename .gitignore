@@ -4,3 +4,4 @@ hw2/APTVCF0921_del_sort_norm_sample_wgstype_contig_sort.vcf
 __pycache__/
 data/
 hisat2/
+*.pth

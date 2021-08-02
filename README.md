@@ -18,3 +18,7 @@ However, the input vcf is not available online
 ## HW3: Blast and Gene Expression Analysis
 
 https://github.com/linnil1/1101BioMedDataMining/tree/main/hw3
+
+## HW4: Deep learning
+
+https://github.com/linnil1/1101BioMedDataMining/tree/main/hw4

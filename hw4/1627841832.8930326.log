@@ -1,0 +1,401 @@
+[ 0] train_loss: 158.185 train_acc: 0.166       [ 0] valid_loss: 126.315 valid_acc: 0.247         Save!
+[ 1] train_loss: 126.387 train_acc: 0.242       [ 1] valid_loss: 124.433 valid_acc: 0.317         Save!
+[ 2] train_loss: 118.131 train_acc: 0.297       [ 2] valid_loss: 108.254 valid_acc: 0.358         Save!
+[ 3] train_loss: 111.802 train_acc: 0.337       [ 3] valid_loss: 115.163 valid_acc: 0.397         Save!
+[ 4] train_loss: 106.953 train_acc: 0.370       [ 4] valid_loss: 98.890 valid_acc: 0.412          Save!
+[ 5] train_loss: 102.342 train_acc: 0.398       [ 5] valid_loss: 94.915 valid_acc: 0.458          Save!
+[ 6] train_loss: 99.723 train_acc: 0.417        [ 6] valid_loss: 94.846 valid_acc: 0.493          Save!
+[ 7] train_loss: 95.183 train_acc: 0.441        [ 7] valid_loss: 84.495 valid_acc: 0.502          Save!
+[ 8] train_loss: 92.212 train_acc: 0.465        [ 8] valid_loss: 86.965 valid_acc: 0.510          Save!
+[ 9] train_loss: 89.485 train_acc: 0.485        [ 9] valid_loss: 82.961 valid_acc: 0.535          Save!
+[10] train_loss: 85.128 train_acc: 0.506        [10] valid_loss: 84.663 valid_acc: 0.521
+[11] train_loss: 83.469 train_acc: 0.525        [11] valid_loss: 72.536 valid_acc: 0.575          Save!
+[12] train_loss: 80.977 train_acc: 0.537        [12] valid_loss: 74.532 valid_acc: 0.585          Save!
+[13] train_loss: 77.634 train_acc: 0.560        [13] valid_loss: 78.879 valid_acc: 0.569
+[14] train_loss: 77.320 train_acc: 0.561        [14] valid_loss: 76.413 valid_acc: 0.597          Save!
+[15] train_loss: 73.484 train_acc: 0.578        [15] valid_loss: 70.044 valid_acc: 0.603          Save!
+[16] train_loss: 72.388 train_acc: 0.586        [16] valid_loss: 70.675 valid_acc: 0.611          Save!
+[17] train_loss: 70.331 train_acc: 0.600        [17] valid_loss: 71.271 valid_acc: 0.634          Save!
+[18] train_loss: 68.352 train_acc: 0.612        [18] valid_loss: 69.088 valid_acc: 0.632
+[19] train_loss: 66.848 train_acc: 0.620        [19] valid_loss: 62.548 valid_acc: 0.650          Save!
+[20] train_loss: 65.378 train_acc: 0.621        [20] valid_loss: 61.967 valid_acc: 0.655          Save!
+[21] train_loss: 64.914 train_acc: 0.632        [21] valid_loss: 61.915 valid_acc: 0.660          Save!
+[22] train_loss: 62.193 train_acc: 0.646        [22] valid_loss: 65.018 valid_acc: 0.641
+[23] train_loss: 61.458 train_acc: 0.651        [23] valid_loss: 62.145 valid_acc: 0.662          Save!
+[24] train_loss: 60.735 train_acc: 0.657        [24] valid_loss: 57.731 valid_acc: 0.676          Save!
+[25] train_loss: 60.164 train_acc: 0.662        [25] valid_loss: 61.587 valid_acc: 0.666
+[26] train_loss: 58.114 train_acc: 0.669        [26] valid_loss: 61.022 valid_acc: 0.673
+[27] train_loss: 56.755 train_acc: 0.678        [27] valid_loss: 53.663 valid_acc: 0.701          Save!
+[28] train_loss: 56.373 train_acc: 0.687        [28] valid_loss: 54.114 valid_acc: 0.699
+[29] train_loss: 55.425 train_acc: 0.689        [29] valid_loss: 61.978 valid_acc: 0.680
+[30] train_loss: 54.282 train_acc: 0.692        [30] valid_loss: 50.906 valid_acc: 0.717          Save!
+[31] train_loss: 52.824 train_acc: 0.703        [31] valid_loss: 53.989 valid_acc: 0.702
+[32] train_loss: 51.544 train_acc: 0.711        [32] valid_loss: 50.715 valid_acc: 0.720          Save!
+[33] train_loss: 50.986 train_acc: 0.707        [33] valid_loss: 66.661 valid_acc: 0.688
+[34] train_loss: 50.744 train_acc: 0.712        [34] valid_loss: 48.801 valid_acc: 0.732          Save!
+[35] train_loss: 49.915 train_acc: 0.726        [35] valid_loss: 47.287 valid_acc: 0.739          Save!
+[36] train_loss: 47.778 train_acc: 0.733        [36] valid_loss: 48.626 valid_acc: 0.738
+[37] train_loss: 47.590 train_acc: 0.733        [37] valid_loss: 48.385 valid_acc: 0.736
+[38] train_loss: 46.703 train_acc: 0.740        [38] valid_loss: 47.947 valid_acc: 0.739          Save!
+[39] train_loss: 46.140 train_acc: 0.739        [39] valid_loss: 52.320 valid_acc: 0.734
+[40] train_loss: 45.585 train_acc: 0.748        [40] valid_loss: 48.990 valid_acc: 0.747          Save!
+[41] train_loss: 44.305 train_acc: 0.749        [41] valid_loss: 49.056 valid_acc: 0.733
+[42] train_loss: 43.180 train_acc: 0.754        [42] valid_loss: 49.724 valid_acc: 0.731
+[43] train_loss: 43.090 train_acc: 0.756        [43] valid_loss: 47.027 valid_acc: 0.754          Save!
+[44] train_loss: 42.809 train_acc: 0.762        [44] valid_loss: 45.660 valid_acc: 0.752
+[45] train_loss: 41.369 train_acc: 0.772        [45] valid_loss: 51.261 valid_acc: 0.750
+[46] train_loss: 40.151 train_acc: 0.775        [46] valid_loss: 42.545 valid_acc: 0.775          Save!
+[47] train_loss: 40.554 train_acc: 0.771        [47] valid_loss: 41.483 valid_acc: 0.780          Save!
+[48] train_loss: 39.936 train_acc: 0.777        [48] valid_loss: 41.964 valid_acc: 0.775
+[49] train_loss: 39.564 train_acc: 0.779        [49] valid_loss: 40.556 valid_acc: 0.783          Save!
+[50] train_loss: 38.388 train_acc: 0.788        [50] valid_loss: 44.733 valid_acc: 0.767
+[51] train_loss: 38.070 train_acc: 0.785        [51] valid_loss: 41.572 valid_acc: 0.779
+[52] train_loss: 38.765 train_acc: 0.783        [52] valid_loss: 44.033 valid_acc: 0.771
+[53] train_loss: 37.434 train_acc: 0.786        [53] valid_loss: 40.890 valid_acc: 0.784          Save!
+[54] train_loss: 36.677 train_acc: 0.792        [54] valid_loss: 40.622 valid_acc: 0.785          Save!
+[55] train_loss: 34.989 train_acc: 0.806        [55] valid_loss: 38.619 valid_acc: 0.794          Save!
+[56] train_loss: 35.161 train_acc: 0.800        [56] valid_loss: 39.474 valid_acc: 0.790
+[57] train_loss: 34.629 train_acc: 0.806        [57] valid_loss: 42.560 valid_acc: 0.775
+[58] train_loss: 34.713 train_acc: 0.802        [58] valid_loss: 39.467 valid_acc: 0.798          Save!
+[59] train_loss: 33.920 train_acc: 0.808        [59] valid_loss: 38.596 valid_acc: 0.795
+[60] train_loss: 33.699 train_acc: 0.810        [60] valid_loss: 41.749 valid_acc: 0.786
+[61] train_loss: 33.274 train_acc: 0.810        [61] valid_loss: 38.793 valid_acc: 0.797
+[62] train_loss: 33.674 train_acc: 0.813        [62] valid_loss: 41.413 valid_acc: 0.787
+[63] train_loss: 32.762 train_acc: 0.814        [63] valid_loss: 38.795 valid_acc: 0.798          Save!
+[64] train_loss: 31.536 train_acc: 0.823        [64] valid_loss: 45.229 valid_acc: 0.777
+[65] train_loss: 32.306 train_acc: 0.817        [65] valid_loss: 38.343 valid_acc: 0.801          Save!
+[66] train_loss: 30.516 train_acc: 0.831        [66] valid_loss: 38.406 valid_acc: 0.803          Save!
+[67] train_loss: 30.461 train_acc: 0.828        [67] valid_loss: 39.122 valid_acc: 0.797
+[68] train_loss: 31.041 train_acc: 0.825        [68] valid_loss: 39.276 valid_acc: 0.803
+[69] train_loss: 30.518 train_acc: 0.829        [69] valid_loss: 36.980 valid_acc: 0.808          Save!
+[70] train_loss: 30.190 train_acc: 0.826        [70] valid_loss: 36.987 valid_acc: 0.809          Save!
+[71] train_loss: 29.201 train_acc: 0.832        [71] valid_loss: 36.743 valid_acc: 0.805
+[72] train_loss: 29.125 train_acc: 0.836        [72] valid_loss: 41.424 valid_acc: 0.794
+[73] train_loss: 28.924 train_acc: 0.839        [73] valid_loss: 37.871 valid_acc: 0.806
+[74] train_loss: 28.510 train_acc: 0.838        [74] valid_loss: 39.249 valid_acc: 0.802
+[75] train_loss: 28.048 train_acc: 0.845        [75] valid_loss: 40.890 valid_acc: 0.796
+[76] train_loss: 27.460 train_acc: 0.842        [76] valid_loss: 38.687 valid_acc: 0.806
+[77] train_loss: 26.988 train_acc: 0.846        [77] valid_loss: 43.336 valid_acc: 0.790
+[78] train_loss: 27.727 train_acc: 0.844        [78] valid_loss: 42.355 valid_acc: 0.792
+[79] train_loss: 27.302 train_acc: 0.848        [79] valid_loss: 37.821 valid_acc: 0.808
+[80] train_loss: 26.679 train_acc: 0.852        [80] valid_loss: 38.184 valid_acc: 0.800
+[81] train_loss: 26.164 train_acc: 0.852        [81] valid_loss: 39.284 valid_acc: 0.800
+[82] train_loss: 25.965 train_acc: 0.854        [82] valid_loss: 37.661 valid_acc: 0.811          Save!
+[83] train_loss: 24.644 train_acc: 0.862        [83] valid_loss: 40.773 valid_acc: 0.803
+[84] train_loss: 25.097 train_acc: 0.862        [84] valid_loss: 38.565 valid_acc: 0.814          Save!
+[85] train_loss: 25.323 train_acc: 0.855        [85] valid_loss: 37.694 valid_acc: 0.813
+[86] train_loss: 24.227 train_acc: 0.863        [86] valid_loss: 41.153 valid_acc: 0.806
+[87] train_loss: 24.805 train_acc: 0.856        [87] valid_loss: 39.230 valid_acc: 0.809
+[88] train_loss: 24.190 train_acc: 0.865        [88] valid_loss: 41.713 valid_acc: 0.803
+[89] train_loss: 23.628 train_acc: 0.867        [89] valid_loss: 37.468 valid_acc: 0.819          Save!
+[90] train_loss: 23.961 train_acc: 0.862        [90] valid_loss: 37.961 valid_acc: 0.813
+[91] train_loss: 23.554 train_acc: 0.867        [91] valid_loss: 37.876 valid_acc: 0.811
+[92] train_loss: 23.444 train_acc: 0.866        [92] valid_loss: 37.291 valid_acc: 0.820          Save!
+[93] train_loss: 23.635 train_acc: 0.872        [93] valid_loss: 36.906 valid_acc: 0.819
+[94] train_loss: 22.925 train_acc: 0.868        [94] valid_loss: 37.230 valid_acc: 0.817
+[95] train_loss: 22.231 train_acc: 0.872        [95] valid_loss: 37.395 valid_acc: 0.816
+[96] train_loss: 21.812 train_acc: 0.876        [96] valid_loss: 37.615 valid_acc: 0.817
+[97] train_loss: 21.809 train_acc: 0.879        [97] valid_loss: 39.352 valid_acc: 0.811
+[98] train_loss: 21.414 train_acc: 0.878        [98] valid_loss: 36.674 valid_acc: 0.819
+[99] train_loss: 21.156 train_acc: 0.879        [99] valid_loss: 43.412 valid_acc: 0.806
+[100] train_loss: 21.659 train_acc: 0.878       [100] valid_loss: 36.662 valid_acc: 0.825         Save!
+[101] train_loss: 20.612 train_acc: 0.882       [101] valid_loss: 37.332 valid_acc: 0.821
+[102] train_loss: 20.875 train_acc: 0.882       [102] valid_loss: 39.948 valid_acc: 0.809
+[103] train_loss: 19.951 train_acc: 0.887       [103] valid_loss: 39.972 valid_acc: 0.819
+[104] train_loss: 20.648 train_acc: 0.882       [104] valid_loss: 37.577 valid_acc: 0.822
+[105] train_loss: 20.189 train_acc: 0.884       [105] valid_loss: 39.265 valid_acc: 0.822
+[106] train_loss: 19.760 train_acc: 0.887       [106] valid_loss: 37.497 valid_acc: 0.822
+[107] train_loss: 19.781 train_acc: 0.887       [107] valid_loss: 37.677 valid_acc: 0.824
+[108] train_loss: 19.879 train_acc: 0.887       [108] valid_loss: 38.021 valid_acc: 0.819
+[109] train_loss: 19.672 train_acc: 0.890       [109] valid_loss: 38.912 valid_acc: 0.817
+[110] train_loss: 19.198 train_acc: 0.892       [110] valid_loss: 37.987 valid_acc: 0.825         Save!
+[111] train_loss: 18.906 train_acc: 0.895       [111] valid_loss: 37.774 valid_acc: 0.824
+[112] train_loss: 18.351 train_acc: 0.898       [112] valid_loss: 37.862 valid_acc: 0.821
+[113] train_loss: 18.603 train_acc: 0.898       [113] valid_loss: 38.112 valid_acc: 0.825
+[114] train_loss: 17.968 train_acc: 0.897       [114] valid_loss: 36.689 valid_acc: 0.827         Save!
+[115] train_loss: 17.641 train_acc: 0.897       [115] valid_loss: 36.709 valid_acc: 0.828         Save!
+[116] train_loss: 17.561 train_acc: 0.902       [116] valid_loss: 37.944 valid_acc: 0.830         Save!
+[117] train_loss: 17.644 train_acc: 0.898       [117] valid_loss: 39.651 valid_acc: 0.817
+[118] train_loss: 17.384 train_acc: 0.901       [118] valid_loss: 37.129 valid_acc: 0.831         Save!
+[119] train_loss: 17.444 train_acc: 0.903       [119] valid_loss: 38.014 valid_acc: 0.830
+[120] train_loss: 17.531 train_acc: 0.900       [120] valid_loss: 37.384 valid_acc: 0.827
+[121] train_loss: 16.895 train_acc: 0.907       [121] valid_loss: 36.991 valid_acc: 0.829
+[122] train_loss: 16.687 train_acc: 0.907       [122] valid_loss: 39.645 valid_acc: 0.824
+[123] train_loss: 15.828 train_acc: 0.908       [123] valid_loss: 38.597 valid_acc: 0.825
+[124] train_loss: 15.750 train_acc: 0.912       [124] valid_loss: 38.522 valid_acc: 0.829
+[125] train_loss: 16.907 train_acc: 0.908       [125] valid_loss: 38.898 valid_acc: 0.824
+[126] train_loss: 15.878 train_acc: 0.911       [126] valid_loss: 39.061 valid_acc: 0.825
+[127] train_loss: 15.605 train_acc: 0.911       [127] valid_loss: 38.636 valid_acc: 0.828
+[128] train_loss: 16.204 train_acc: 0.907       [128] valid_loss: 38.434 valid_acc: 0.830
+[129] train_loss: 15.863 train_acc: 0.910       [129] valid_loss: 39.398 valid_acc: 0.831         Save!
+[130] train_loss: 15.829 train_acc: 0.912       [130] valid_loss: 38.526 valid_acc: 0.825
+[131] train_loss: 15.000 train_acc: 0.917       [131] valid_loss: 38.787 valid_acc: 0.830
+[132] train_loss: 15.278 train_acc: 0.912       [132] valid_loss: 39.013 valid_acc: 0.824
+[133] train_loss: 14.716 train_acc: 0.915       [133] valid_loss: 38.618 valid_acc: 0.828
+[134] train_loss: 14.657 train_acc: 0.916       [134] valid_loss: 38.692 valid_acc: 0.833         Save!
+[135] train_loss: 14.078 train_acc: 0.921       [135] valid_loss: 39.140 valid_acc: 0.831
+[136] train_loss: 15.117 train_acc: 0.913       [136] valid_loss: 39.929 valid_acc: 0.827
+[137] train_loss: 14.421 train_acc: 0.919       [137] valid_loss: 39.563 valid_acc: 0.826
+[138] train_loss: 14.275 train_acc: 0.920       [138] valid_loss: 40.159 valid_acc: 0.828
+[139] train_loss: 14.158 train_acc: 0.921       [139] valid_loss: 39.221 valid_acc: 0.830
+[140] train_loss: 14.050 train_acc: 0.920       [140] valid_loss: 38.138 valid_acc: 0.832
+[141] train_loss: 13.169 train_acc: 0.927       [141] valid_loss: 39.007 valid_acc: 0.833         Save!
+[142] train_loss: 13.619 train_acc: 0.923       [142] valid_loss: 41.131 valid_acc: 0.826
+[143] train_loss: 12.997 train_acc: 0.928       [143] valid_loss: 39.341 valid_acc: 0.835         Save!
+[144] train_loss: 14.009 train_acc: 0.923       [144] valid_loss: 40.103 valid_acc: 0.828
+[145] train_loss: 13.104 train_acc: 0.926       [145] valid_loss: 39.254 valid_acc: 0.837         Save!
+[146] train_loss: 13.447 train_acc: 0.922       [146] valid_loss: 40.809 valid_acc: 0.829
+[147] train_loss: 12.728 train_acc: 0.929       [147] valid_loss: 38.910 valid_acc: 0.838         Save!
+[148] train_loss: 12.362 train_acc: 0.929       [148] valid_loss: 41.425 valid_acc: 0.829
+[149] train_loss: 12.001 train_acc: 0.933       [149] valid_loss: 41.553 valid_acc: 0.830
+[150] train_loss: 12.796 train_acc: 0.924       [150] valid_loss: 40.545 valid_acc: 0.831
+[151] train_loss: 12.448 train_acc: 0.932       [151] valid_loss: 40.075 valid_acc: 0.831
+[152] train_loss: 13.033 train_acc: 0.924       [152] valid_loss: 41.346 valid_acc: 0.828
+[153] train_loss: 11.938 train_acc: 0.931       [153] valid_loss: 42.019 valid_acc: 0.823
+[154] train_loss: 11.433 train_acc: 0.936       [154] valid_loss: 42.679 valid_acc: 0.828
+[155] train_loss: 11.905 train_acc: 0.933       [155] valid_loss: 39.593 valid_acc: 0.831
+[156] train_loss: 12.065 train_acc: 0.930       [156] valid_loss: 40.932 valid_acc: 0.830
+[157] train_loss: 11.900 train_acc: 0.934       [157] valid_loss: 40.648 valid_acc: 0.834
+[158] train_loss: 12.097 train_acc: 0.931       [158] valid_loss: 42.632 valid_acc: 0.826
+[159] train_loss: 11.462 train_acc: 0.936       [159] valid_loss: 39.876 valid_acc: 0.833
+[160] train_loss: 11.836 train_acc: 0.932       [160] valid_loss: 41.013 valid_acc: 0.834
+[161] train_loss: 11.177 train_acc: 0.936       [161] valid_loss: 39.601 valid_acc: 0.841         Save!
+[162] train_loss: 11.044 train_acc: 0.939       [162] valid_loss: 43.449 valid_acc: 0.827
+[163] train_loss: 10.901 train_acc: 0.936       [163] valid_loss: 39.663 valid_acc: 0.838
+[164] train_loss: 10.900 train_acc: 0.942       [164] valid_loss: 40.752 valid_acc: 0.835
+[165] train_loss: 10.430 train_acc: 0.939       [165] valid_loss: 40.830 valid_acc: 0.836
+[166] train_loss: 10.852 train_acc: 0.940       [166] valid_loss: 43.694 valid_acc: 0.832
+[167] train_loss: 10.717 train_acc: 0.937       [167] valid_loss: 41.636 valid_acc: 0.836
+[168] train_loss: 10.623 train_acc: 0.940       [168] valid_loss: 42.355 valid_acc: 0.833
+[169] train_loss: 10.147 train_acc: 0.946       [169] valid_loss: 41.441 valid_acc: 0.837
+[170] train_loss: 10.347 train_acc: 0.942       [170] valid_loss: 41.140 valid_acc: 0.835
+[171] train_loss:  9.739 train_acc: 0.944       [171] valid_loss: 41.866 valid_acc: 0.833
+[172] train_loss: 10.205 train_acc: 0.945       [172] valid_loss: 42.647 valid_acc: 0.837
+[173] train_loss:  9.902 train_acc: 0.945       [173] valid_loss: 42.985 valid_acc: 0.838
+[174] train_loss: 10.277 train_acc: 0.943       [174] valid_loss: 41.447 valid_acc: 0.840
+[175] train_loss:  9.549 train_acc: 0.947       [175] valid_loss: 41.466 valid_acc: 0.834
+[176] train_loss:  9.458 train_acc: 0.945       [176] valid_loss: 44.642 valid_acc: 0.830
+[177] train_loss:  9.430 train_acc: 0.948       [177] valid_loss: 42.826 valid_acc: 0.836
+[178] train_loss:  9.711 train_acc: 0.945       [178] valid_loss: 42.180 valid_acc: 0.836
+[179] train_loss:  9.120 train_acc: 0.948       [179] valid_loss: 43.065 valid_acc: 0.831
+[180] train_loss:  9.963 train_acc: 0.943       [180] valid_loss: 42.677 valid_acc: 0.836
+[181] train_loss:  9.681 train_acc: 0.947       [181] valid_loss: 41.902 valid_acc: 0.838
+[182] train_loss:  9.179 train_acc: 0.949       [182] valid_loss: 42.331 valid_acc: 0.839
+[183] train_loss:  9.084 train_acc: 0.947       [183] valid_loss: 41.663 valid_acc: 0.839
+[184] train_loss:  9.238 train_acc: 0.947       [184] valid_loss: 41.904 valid_acc: 0.837
+[185] train_loss:  8.992 train_acc: 0.948       [185] valid_loss: 41.994 valid_acc: 0.840
+[186] train_loss:  8.769 train_acc: 0.950       [186] valid_loss: 42.032 valid_acc: 0.836
+[187] train_loss:  9.015 train_acc: 0.950       [187] valid_loss: 46.007 valid_acc: 0.829
+[188] train_loss:  8.937 train_acc: 0.950       [188] valid_loss: 42.147 valid_acc: 0.838
+[189] train_loss:  8.269 train_acc: 0.952       [189] valid_loss: 41.763 valid_acc: 0.839
+[190] train_loss:  7.947 train_acc: 0.953       [190] valid_loss: 43.615 valid_acc: 0.835
+[191] train_loss:  8.313 train_acc: 0.952       [191] valid_loss: 43.323 valid_acc: 0.839
+[192] train_loss:  8.460 train_acc: 0.953       [192] valid_loss: 42.534 valid_acc: 0.837
+[193] train_loss:  7.631 train_acc: 0.958       [193] valid_loss: 42.014 valid_acc: 0.840
+[194] train_loss:  8.255 train_acc: 0.951       [194] valid_loss: 43.209 valid_acc: 0.838
+[195] train_loss:  7.994 train_acc: 0.956       [195] valid_loss: 44.439 valid_acc: 0.835
+[196] train_loss:  8.200 train_acc: 0.952       [196] valid_loss: 42.896 valid_acc: 0.841         Save!
+[197] train_loss:  7.986 train_acc: 0.955       [197] valid_loss: 44.382 valid_acc: 0.839
+[198] train_loss:  8.464 train_acc: 0.951       [198] valid_loss: 40.897 valid_acc: 0.842         Save!
+[199] train_loss:  7.336 train_acc: 0.958       [199] valid_loss: 42.945 valid_acc: 0.843         Save!
+[200] train_loss:  7.512 train_acc: 0.958       [200] valid_loss: 42.877 valid_acc: 0.839
+[201] train_loss:  8.020 train_acc: 0.954       [201] valid_loss: 44.198 valid_acc: 0.838
+[202] train_loss:  8.333 train_acc: 0.953       [202] valid_loss: 42.967 valid_acc: 0.837
+[203] train_loss:  7.643 train_acc: 0.957       [203] valid_loss: 41.747 valid_acc: 0.843         Save!
+[204] train_loss:  7.113 train_acc: 0.960       [204] valid_loss: 43.722 valid_acc: 0.837
+[205] train_loss:  7.583 train_acc: 0.959       [205] valid_loss: 43.986 valid_acc: 0.840
+[206] train_loss:  7.635 train_acc: 0.957       [206] valid_loss: 43.626 valid_acc: 0.839
+[207] train_loss:  6.440 train_acc: 0.963       [207] valid_loss: 45.241 valid_acc: 0.840
+[208] train_loss:  7.204 train_acc: 0.959       [208] valid_loss: 45.992 valid_acc: 0.840
+[209] train_loss:  7.265 train_acc: 0.960       [209] valid_loss: 45.050 valid_acc: 0.838
+[210] train_loss:  6.683 train_acc: 0.963       [210] valid_loss: 43.341 valid_acc: 0.839
+[211] train_loss:  6.932 train_acc: 0.961       [211] valid_loss: 43.339 valid_acc: 0.841
+[212] train_loss:  6.378 train_acc: 0.965       [212] valid_loss: 44.928 valid_acc: 0.839
+[213] train_loss:  6.527 train_acc: 0.962       [213] valid_loss: 44.611 valid_acc: 0.841
+[214] train_loss:  7.100 train_acc: 0.960       [214] valid_loss: 44.831 valid_acc: 0.838
+[215] train_loss:  6.369 train_acc: 0.965       [215] valid_loss: 43.457 valid_acc: 0.842
+[216] train_loss:  6.848 train_acc: 0.962       [216] valid_loss: 43.604 valid_acc: 0.841
+[217] train_loss:  6.487 train_acc: 0.962       [217] valid_loss: 43.084 valid_acc: 0.844         Save!
+[218] train_loss:  5.758 train_acc: 0.968       [218] valid_loss: 45.083 valid_acc: 0.839
+[219] train_loss:  6.283 train_acc: 0.965       [219] valid_loss: 43.824 valid_acc: 0.843
+[220] train_loss:  6.387 train_acc: 0.965       [220] valid_loss: 44.081 valid_acc: 0.842
+[221] train_loss:  5.825 train_acc: 0.967       [221] valid_loss: 44.576 valid_acc: 0.846         Save!
+[222] train_loss:  6.565 train_acc: 0.964       [222] valid_loss: 44.339 valid_acc: 0.845
+[223] train_loss:  6.195 train_acc: 0.965       [223] valid_loss: 44.591 valid_acc: 0.844
+[224] train_loss:  6.663 train_acc: 0.963       [224] valid_loss: 42.618 valid_acc: 0.841
+[225] train_loss:  6.250 train_acc: 0.967       [225] valid_loss: 45.817 valid_acc: 0.834
+[226] train_loss:  6.350 train_acc: 0.963       [226] valid_loss: 43.554 valid_acc: 0.841
+[227] train_loss:  5.939 train_acc: 0.967       [227] valid_loss: 44.459 valid_acc: 0.841
+[228] train_loss:  6.115 train_acc: 0.967       [228] valid_loss: 45.559 valid_acc: 0.841
+[229] train_loss:  5.999 train_acc: 0.966       [229] valid_loss: 43.739 valid_acc: 0.840
+[230] train_loss:  5.993 train_acc: 0.967       [230] valid_loss: 45.124 valid_acc: 0.843
+[231] train_loss:  5.666 train_acc: 0.966       [231] valid_loss: 43.671 valid_acc: 0.838
+[232] train_loss:  5.582 train_acc: 0.970       [232] valid_loss: 44.190 valid_acc: 0.841
+[233] train_loss:  5.100 train_acc: 0.970       [233] valid_loss: 44.077 valid_acc: 0.841
+[234] train_loss:  6.010 train_acc: 0.968       [234] valid_loss: 45.019 valid_acc: 0.844
+[235] train_loss:  5.950 train_acc: 0.967       [235] valid_loss: 43.149 valid_acc: 0.844
+[236] train_loss:  5.513 train_acc: 0.967       [236] valid_loss: 43.418 valid_acc: 0.844
+[237] train_loss:  5.903 train_acc: 0.967       [237] valid_loss: 42.581 valid_acc: 0.847         Save!
+[238] train_loss:  5.436 train_acc: 0.969       [238] valid_loss: 43.972 valid_acc: 0.844
+[239] train_loss:  5.369 train_acc: 0.970       [239] valid_loss: 44.863 valid_acc: 0.843
+[240] train_loss:  5.128 train_acc: 0.970       [240] valid_loss: 45.011 valid_acc: 0.845
+[241] train_loss:  5.428 train_acc: 0.970       [241] valid_loss: 43.597 valid_acc: 0.845
+[242] train_loss:  5.081 train_acc: 0.972       [242] valid_loss: 44.636 valid_acc: 0.843
+[243] train_loss:  4.821 train_acc: 0.973       [243] valid_loss: 44.558 valid_acc: 0.847         Save!
+[244] train_loss:  4.961 train_acc: 0.975       [244] valid_loss: 44.091 valid_acc: 0.847
+[245] train_loss:  5.029 train_acc: 0.970       [245] valid_loss: 44.880 valid_acc: 0.846
+[246] train_loss:  4.759 train_acc: 0.974       [246] valid_loss: 45.862 valid_acc: 0.846
+[247] train_loss:  4.762 train_acc: 0.973       [247] valid_loss: 44.385 valid_acc: 0.848         Save!
+[248] train_loss:  4.681 train_acc: 0.973       [248] valid_loss: 46.139 valid_acc: 0.846
+[249] train_loss:  4.893 train_acc: 0.973       [249] valid_loss: 44.641 valid_acc: 0.847
+[250] train_loss:  5.393 train_acc: 0.969       [250] valid_loss: 45.571 valid_acc: 0.845
+[251] train_loss:  4.572 train_acc: 0.976       [251] valid_loss: 44.548 valid_acc: 0.845
+[252] train_loss:  4.559 train_acc: 0.976       [252] valid_loss: 45.642 valid_acc: 0.851         Save!
+[253] train_loss:  4.396 train_acc: 0.977       [253] valid_loss: 45.426 valid_acc: 0.847
+[254] train_loss:  4.854 train_acc: 0.973       [254] valid_loss: 45.787 valid_acc: 0.845
+[255] train_loss:  4.146 train_acc: 0.976       [255] valid_loss: 45.596 valid_acc: 0.844
+[256] train_loss:  4.334 train_acc: 0.975       [256] valid_loss: 44.930 valid_acc: 0.851         Save!
+[257] train_loss:  4.370 train_acc: 0.975       [257] valid_loss: 45.204 valid_acc: 0.848
+[258] train_loss:  4.409 train_acc: 0.975       [258] valid_loss: 46.624 valid_acc: 0.846
+[259] train_loss:  4.528 train_acc: 0.975       [259] valid_loss: 46.351 valid_acc: 0.849
+[260] train_loss:  4.381 train_acc: 0.976       [260] valid_loss: 45.701 valid_acc: 0.849
+[261] train_loss:  4.399 train_acc: 0.977       [261] valid_loss: 44.791 valid_acc: 0.846
+[262] train_loss:  4.651 train_acc: 0.975       [262] valid_loss: 45.975 valid_acc: 0.846
+[263] train_loss:  4.095 train_acc: 0.977       [263] valid_loss: 47.169 valid_acc: 0.849
+[264] train_loss:  3.863 train_acc: 0.979       [264] valid_loss: 47.692 valid_acc: 0.844
+[265] train_loss:  4.032 train_acc: 0.979       [265] valid_loss: 46.564 valid_acc: 0.845
+[266] train_loss:  4.258 train_acc: 0.975       [266] valid_loss: 46.302 valid_acc: 0.847
+[267] train_loss:  3.771 train_acc: 0.979       [267] valid_loss: 46.741 valid_acc: 0.847
+[268] train_loss:  3.917 train_acc: 0.978       [268] valid_loss: 46.953 valid_acc: 0.845
+[269] train_loss:  3.983 train_acc: 0.979       [269] valid_loss: 45.980 valid_acc: 0.847
+[270] train_loss:  4.273 train_acc: 0.976       [270] valid_loss: 47.161 valid_acc: 0.846
+[271] train_loss:  3.821 train_acc: 0.979       [271] valid_loss: 45.868 valid_acc: 0.847
+[272] train_loss:  3.783 train_acc: 0.979       [272] valid_loss: 47.713 valid_acc: 0.846
+[273] train_loss:  4.210 train_acc: 0.976       [273] valid_loss: 45.493 valid_acc: 0.852         Save!
+[274] train_loss:  3.704 train_acc: 0.981       [274] valid_loss: 48.550 valid_acc: 0.842
+[275] train_loss:  3.919 train_acc: 0.979       [275] valid_loss: 46.653 valid_acc: 0.849
+[276] train_loss:  3.766 train_acc: 0.979       [276] valid_loss: 47.030 valid_acc: 0.849
+[277] train_loss:  3.445 train_acc: 0.980       [277] valid_loss: 45.986 valid_acc: 0.849
+[278] train_loss:  3.827 train_acc: 0.978       [278] valid_loss: 45.979 valid_acc: 0.850
+[279] train_loss:  3.911 train_acc: 0.978       [279] valid_loss: 47.603 valid_acc: 0.846
+[280] train_loss:  3.996 train_acc: 0.978       [280] valid_loss: 46.761 valid_acc: 0.850
+[281] train_loss:  3.578 train_acc: 0.980       [281] valid_loss: 47.260 valid_acc: 0.846
+[282] train_loss:  3.592 train_acc: 0.980       [282] valid_loss: 47.048 valid_acc: 0.850
+[283] train_loss:  3.722 train_acc: 0.980       [283] valid_loss: 47.184 valid_acc: 0.848
+[284] train_loss:  3.298 train_acc: 0.982       [284] valid_loss: 45.835 valid_acc: 0.850
+[285] train_loss:  3.506 train_acc: 0.980       [285] valid_loss: 47.353 valid_acc: 0.848
+[286] train_loss:  3.618 train_acc: 0.978       [286] valid_loss: 46.004 valid_acc: 0.852
+[287] train_loss:  3.284 train_acc: 0.982       [287] valid_loss: 47.184 valid_acc: 0.851
+[288] train_loss:  3.435 train_acc: 0.981       [288] valid_loss: 46.924 valid_acc: 0.850
+[289] train_loss:  3.426 train_acc: 0.982       [289] valid_loss: 44.864 valid_acc: 0.852
+[290] train_loss:  3.611 train_acc: 0.979       [290] valid_loss: 46.302 valid_acc: 0.849
+[291] train_loss:  3.583 train_acc: 0.980       [291] valid_loss: 46.738 valid_acc: 0.848
+[292] train_loss:  3.462 train_acc: 0.980       [292] valid_loss: 46.640 valid_acc: 0.850
+[293] train_loss:  3.245 train_acc: 0.981       [293] valid_loss: 46.867 valid_acc: 0.846
+[294] train_loss:  3.436 train_acc: 0.980       [294] valid_loss: 45.067 valid_acc: 0.851
+[295] train_loss:  3.155 train_acc: 0.982       [295] valid_loss: 47.216 valid_acc: 0.851
+[296] train_loss:  3.373 train_acc: 0.983       [296] valid_loss: 46.688 valid_acc: 0.849
+[297] train_loss:  3.285 train_acc: 0.981       [297] valid_loss: 47.091 valid_acc: 0.849
+[298] train_loss:  3.352 train_acc: 0.981       [298] valid_loss: 47.297 valid_acc: 0.850
+[299] train_loss:  3.434 train_acc: 0.980       [299] valid_loss: 46.939 valid_acc: 0.851
+[300] train_loss:  3.360 train_acc: 0.982       [300] valid_loss: 46.798 valid_acc: 0.851
+[301] train_loss:  3.212 train_acc: 0.983       [301] valid_loss: 47.452 valid_acc: 0.848
+[302] train_loss:  3.037 train_acc: 0.984       [302] valid_loss: 46.378 valid_acc: 0.850
+[303] train_loss:  3.165 train_acc: 0.982       [303] valid_loss: 47.991 valid_acc: 0.849
+[304] train_loss:  3.125 train_acc: 0.983       [304] valid_loss: 47.518 valid_acc: 0.852         Save!
+[305] train_loss:  3.045 train_acc: 0.984       [305] valid_loss: 46.436 valid_acc: 0.851
+[306] train_loss:  3.150 train_acc: 0.982       [306] valid_loss: 45.669 valid_acc: 0.853         Save!
+[307] train_loss:  3.164 train_acc: 0.982       [307] valid_loss: 46.667 valid_acc: 0.853         Save!
+[308] train_loss:  3.313 train_acc: 0.981       [308] valid_loss: 47.303 valid_acc: 0.852
+[309] train_loss:  2.761 train_acc: 0.986       [309] valid_loss: 47.686 valid_acc: 0.853
+[310] train_loss:  2.950 train_acc: 0.984       [310] valid_loss: 48.248 valid_acc: 0.852
+[311] train_loss:  2.784 train_acc: 0.984       [311] valid_loss: 47.189 valid_acc: 0.852
+[312] train_loss:  2.910 train_acc: 0.983       [312] valid_loss: 46.691 valid_acc: 0.854         Save!
+[313] train_loss:  3.044 train_acc: 0.982       [313] valid_loss: 47.176 valid_acc: 0.852
+[314] train_loss:  3.168 train_acc: 0.983       [314] valid_loss: 47.977 valid_acc: 0.852
+[315] train_loss:  2.863 train_acc: 0.983       [315] valid_loss: 47.899 valid_acc: 0.851
+[316] train_loss:  2.919 train_acc: 0.983       [316] valid_loss: 47.535 valid_acc: 0.854         Save!
+[317] train_loss:  3.252 train_acc: 0.984       [317] valid_loss: 46.234 valid_acc: 0.851
+[318] train_loss:  2.839 train_acc: 0.984       [318] valid_loss: 46.282 valid_acc: 0.852
+[319] train_loss:  3.127 train_acc: 0.982       [319] valid_loss: 47.371 valid_acc: 0.852
+[320] train_loss:  2.729 train_acc: 0.985       [320] valid_loss: 47.276 valid_acc: 0.852
+[321] train_loss:  2.807 train_acc: 0.983       [321] valid_loss: 46.284 valid_acc: 0.853
+[322] train_loss:  3.084 train_acc: 0.983       [322] valid_loss: 46.797 valid_acc: 0.851
+[323] train_loss:  2.930 train_acc: 0.983       [323] valid_loss: 46.550 valid_acc: 0.851
+[324] train_loss:  2.870 train_acc: 0.984       [324] valid_loss: 47.240 valid_acc: 0.851
+[325] train_loss:  2.750 train_acc: 0.984       [325] valid_loss: 46.415 valid_acc: 0.852
+[326] train_loss:  2.935 train_acc: 0.984       [326] valid_loss: 45.857 valid_acc: 0.851
+[327] train_loss:  2.679 train_acc: 0.985       [327] valid_loss: 47.750 valid_acc: 0.852
+[328] train_loss:  2.880 train_acc: 0.983       [328] valid_loss: 46.860 valid_acc: 0.851
+[329] train_loss:  2.492 train_acc: 0.985       [329] valid_loss: 47.870 valid_acc: 0.848
+[330] train_loss:  2.792 train_acc: 0.985       [330] valid_loss: 47.514 valid_acc: 0.852
+[331] train_loss:  2.461 train_acc: 0.987       [331] valid_loss: 48.053 valid_acc: 0.852
+[332] train_loss:  2.939 train_acc: 0.984       [332] valid_loss: 47.346 valid_acc: 0.853
+[333] train_loss:  2.715 train_acc: 0.985       [333] valid_loss: 46.769 valid_acc: 0.852
+[334] train_loss:  2.566 train_acc: 0.986       [334] valid_loss: 46.439 valid_acc: 0.852
+[335] train_loss:  2.773 train_acc: 0.984       [335] valid_loss: 47.619 valid_acc: 0.852
+[336] train_loss:  2.594 train_acc: 0.987       [336] valid_loss: 47.467 valid_acc: 0.851
+[337] train_loss:  2.599 train_acc: 0.986       [337] valid_loss: 48.215 valid_acc: 0.852
+[338] train_loss:  2.869 train_acc: 0.984       [338] valid_loss: 47.637 valid_acc: 0.852
+[339] train_loss:  2.471 train_acc: 0.986       [339] valid_loss: 46.481 valid_acc: 0.853
+[340] train_loss:  2.834 train_acc: 0.984       [340] valid_loss: 48.179 valid_acc: 0.854
+[341] train_loss:  2.620 train_acc: 0.986       [341] valid_loss: 46.831 valid_acc: 0.852
+[342] train_loss:  2.766 train_acc: 0.985       [342] valid_loss: 47.118 valid_acc: 0.854
+[343] train_loss:  2.687 train_acc: 0.985       [343] valid_loss: 47.822 valid_acc: 0.854
+[344] train_loss:  2.590 train_acc: 0.986       [344] valid_loss: 47.334 valid_acc: 0.853
+[345] train_loss:  2.477 train_acc: 0.986       [345] valid_loss: 47.346 valid_acc: 0.853
+[346] train_loss:  2.878 train_acc: 0.984       [346] valid_loss: 47.345 valid_acc: 0.853
+[347] train_loss:  2.346 train_acc: 0.987       [347] valid_loss: 48.257 valid_acc: 0.850
+[348] train_loss:  2.561 train_acc: 0.985       [348] valid_loss: 48.582 valid_acc: 0.852
+[349] train_loss:  2.549 train_acc: 0.985       [349] valid_loss: 47.292 valid_acc: 0.851
+[350] train_loss:  2.672 train_acc: 0.985       [350] valid_loss: 47.529 valid_acc: 0.853
+[351] train_loss:  2.372 train_acc: 0.987       [351] valid_loss: 46.784 valid_acc: 0.854
+[352] train_loss:  2.456 train_acc: 0.986       [352] valid_loss: 47.458 valid_acc: 0.853
+[353] train_loss:  2.664 train_acc: 0.986       [353] valid_loss: 47.280 valid_acc: 0.854
+[354] train_loss:  2.471 train_acc: 0.986       [354] valid_loss: 47.113 valid_acc: 0.852
+[355] train_loss:  2.405 train_acc: 0.987       [355] valid_loss: 47.541 valid_acc: 0.851
+[356] train_loss:  2.469 train_acc: 0.986       [356] valid_loss: 48.111 valid_acc: 0.852
+[357] train_loss:  2.429 train_acc: 0.985       [357] valid_loss: 48.036 valid_acc: 0.852
+[358] train_loss:  2.566 train_acc: 0.985       [358] valid_loss: 47.878 valid_acc: 0.851
+[359] train_loss:  2.555 train_acc: 0.986       [359] valid_loss: 47.555 valid_acc: 0.852
+[360] train_loss:  2.565 train_acc: 0.986       [360] valid_loss: 48.165 valid_acc: 0.852
+[361] train_loss:  2.346 train_acc: 0.987       [361] valid_loss: 48.342 valid_acc: 0.853
+[362] train_loss:  2.587 train_acc: 0.986       [362] valid_loss: 47.958 valid_acc: 0.852
+[363] train_loss:  2.555 train_acc: 0.987       [363] valid_loss: 46.972 valid_acc: 0.852
+[364] train_loss:  2.242 train_acc: 0.988       [364] valid_loss: 47.718 valid_acc: 0.853
+[365] train_loss:  2.335 train_acc: 0.988       [365] valid_loss: 47.281 valid_acc: 0.854
+[366] train_loss:  2.844 train_acc: 0.984       [366] valid_loss: 47.450 valid_acc: 0.854
+[367] train_loss:  2.156 train_acc: 0.987       [367] valid_loss: 47.219 valid_acc: 0.854
+[368] train_loss:  2.313 train_acc: 0.987       [368] valid_loss: 48.673 valid_acc: 0.852
+[369] train_loss:  2.537 train_acc: 0.986       [369] valid_loss: 47.608 valid_acc: 0.853
+[370] train_loss:  2.482 train_acc: 0.987       [370] valid_loss: 47.610 valid_acc: 0.852
+[371] train_loss:  2.488 train_acc: 0.987       [371] valid_loss: 46.726 valid_acc: 0.854
+[372] train_loss:  2.344 train_acc: 0.987       [372] valid_loss: 46.958 valid_acc: 0.854
+[373] train_loss:  2.320 train_acc: 0.988       [373] valid_loss: 47.539 valid_acc: 0.853
+[374] train_loss:  2.382 train_acc: 0.986       [374] valid_loss: 46.844 valid_acc: 0.853
+[375] train_loss:  2.033 train_acc: 0.989       [375] valid_loss: 48.026 valid_acc: 0.854
+[376] train_loss:  2.323 train_acc: 0.987       [376] valid_loss: 47.205 valid_acc: 0.853
+[377] train_loss:  2.629 train_acc: 0.984       [377] valid_loss: 46.658 valid_acc: 0.853
+[378] train_loss:  2.573 train_acc: 0.985       [378] valid_loss: 47.485 valid_acc: 0.853
+[379] train_loss:  2.640 train_acc: 0.986       [379] valid_loss: 46.587 valid_acc: 0.854         Save!
+[380] train_loss:  2.434 train_acc: 0.987       [380] valid_loss: 47.365 valid_acc: 0.853
+[381] train_loss:  2.276 train_acc: 0.987       [381] valid_loss: 46.053 valid_acc: 0.854
+[382] train_loss:  2.499 train_acc: 0.988       [382] valid_loss: 47.464 valid_acc: 0.854
+[383] train_loss:  2.534 train_acc: 0.986       [383] valid_loss: 47.527 valid_acc: 0.855         Save!
+[384] train_loss:  2.412 train_acc: 0.987       [384] valid_loss: 47.201 valid_acc: 0.854
+[385] train_loss:  2.761 train_acc: 0.985       [385] valid_loss: 47.517 valid_acc: 0.854
+[386] train_loss:  2.510 train_acc: 0.987       [386] valid_loss: 47.007 valid_acc: 0.855         Save!
+[387] train_loss:  2.418 train_acc: 0.986       [387] valid_loss: 47.612 valid_acc: 0.853
+[388] train_loss:  2.431 train_acc: 0.987       [388] valid_loss: 47.700 valid_acc: 0.854
+[389] train_loss:  2.309 train_acc: 0.987       [389] valid_loss: 47.708 valid_acc: 0.854
+[390] train_loss:  2.484 train_acc: 0.986       [390] valid_loss: 47.874 valid_acc: 0.854
+[391] train_loss:  2.294 train_acc: 0.987       [391] valid_loss: 47.221 valid_acc: 0.852
+[392] train_loss:  2.481 train_acc: 0.986       [392] valid_loss: 47.170 valid_acc: 0.855
+[393] train_loss:  2.245 train_acc: 0.988       [393] valid_loss: 47.877 valid_acc: 0.854
+[394] train_loss:  2.136 train_acc: 0.988       [394] valid_loss: 47.891 valid_acc: 0.853
+[395] train_loss:  2.356 train_acc: 0.988       [395] valid_loss: 47.136 valid_acc: 0.854
+[396] train_loss:  2.520 train_acc: 0.987       [396] valid_loss: 47.527 valid_acc: 0.851
+[397] train_loss:  2.136 train_acc: 0.989       [397] valid_loss: 47.530 valid_acc: 0.853
+[398] train_loss:  2.299 train_acc: 0.987       [398] valid_loss: 48.195 valid_acc: 0.853
+[399] train_loss:  2.379 train_acc: 0.986       [399] valid_loss: 48.034 valid_acc: 0.853
+Finished
