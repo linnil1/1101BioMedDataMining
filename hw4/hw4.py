@@ -6,19 +6,19 @@ from torch import nn, optim
 from torchvision import transforms
 from tqdm import tqdm
 from hw4_data import get_data
-from hw4_model import DarkNet53
+from hw4_model import LabelSmoothingLoss, DarkNet53
 
 
-epoches = 200
-batch_size = 50
+epoches = 400
+batch_size = 16
 
 # change this to resume
 name = str(time.time())
-# name = "1627714346.7687738"
-# name = "1627797842.914972"
+name = "1627841832.8930326"
 
+# Change model here
 # from torchvision.models import *
-# from hw4_other import LabelSmoothingLoss, DenseNet121, densenet_cifar
+# from hw4_other import DenseNet121, densenet_cifar
 # 32, (6, 12, 24, 16), 64,
 # model = densenet121(pretrained=False, num_classes=10, drop_rate=0.1)
 # 32, (6, 12, 48, 32), 64
@@ -27,13 +27,17 @@ name = str(time.time())
 # model = densenet_cifar()
 model = DarkNet53()
 
+# Change loss function
+# loss_func = LabelSmoothingLoss(10, 0.1)
+loss_func = nn.CrossEntropyLoss()
 
+# data argumentation
 transform_my = transforms.Compose([
     transforms.ColorJitter(0.4, 0.4, 0.4),
     # transforms.RandomRotation(10),
     transforms.RandomHorizontalFlip(p=0.5),
     transforms.RandomVerticalFlip(p=0.5),
-    #  transforms.RandomCrop(30),
+    # transforms.RandomCrop(30),
     transforms.ToTensor(),
 ])
 
@@ -59,12 +63,8 @@ transform_train_my = transforms.Compose([
 dataloader_train, dataloader_test = \
         get_data(transform_train, transform_test, batch_size=batch_size)
 
-
+# init with gpu or cpu
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-
-# loss_func = LabelSmoothingLoss(10, 0.1)
-loss_func = nn.CrossEntropyLoss()
-# opt = optim.Adam(model.parameters(), lr=0.001)
 model = model.to(device)
 
 # init training parameters
@@ -74,13 +74,13 @@ if os.path.exists(f"{name}.pth"):
     best_acc = checkpoint['acc']
     start_epoch = checkpoint['epoch']
     opt = optim.SGD(model.parameters(), lr=0.01)
+    # opt = optim.Adam(model.parameters(), lr=0.001)
 else:
     start_epoch = 0
     best_acc = 0
     opt = optim.SGD(model.parameters(), lr=0.1)
 
 scheduler = optim.lr_scheduler.CosineAnnealingLR(opt, T_max=epoches)
-
 
 if __name__ == "__main__":
     print(f"Start training {name}")

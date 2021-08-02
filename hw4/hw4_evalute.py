@@ -1,3 +1,4 @@
+import sys
 import torch
 import numpy as np
 import matplotlib.pyplot as plt
@@ -56,13 +57,13 @@ def createMatrix(predit, labels):
 
 
 if __name__ == "__main__":
-    name = "1627802633.039708"
+    name = sys.argv[1]
 
     predit, labels = runModel(name)
     print("Acc      ", accuracy_score(labels, predit))
-    print("Precision", precision_score(labels, predit, average='micro'))
-    print("Recall   ", recall_score(labels, predit, average='micro'))
-    print("F1       ", f1_score(labels, predit, average='micro'))
+    print("Precision", precision_score(labels, predit, average='macro'))
+    print("Recall   ", recall_score(labels, predit, average='macro'))
+    print("F1       ", f1_score(labels, predit, average='macro'))
 
     cm = createMatrix(predit, labels)
     print(cm)
