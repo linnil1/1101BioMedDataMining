@@ -1,3 +1,4 @@
+Start 1627841832.8930326
 [ 0] train_loss: 158.185 train_acc: 0.166       [ 0] valid_loss: 126.315 valid_acc: 0.247         Save!
 [ 1] train_loss: 126.387 train_acc: 0.242       [ 1] valid_loss: 124.433 valid_acc: 0.317         Save!
 [ 2] train_loss: 118.131 train_acc: 0.297       [ 2] valid_loss: 108.254 valid_acc: 0.358         Save!

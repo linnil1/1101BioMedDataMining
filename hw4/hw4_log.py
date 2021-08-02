@@ -13,6 +13,8 @@ for i in open(f"{name}"):
 data = np.array(data).T
 
 # plot
+plt.figure(figsize=(12, 6))
+plt.tight_layout()
 plt.subplot(1, 2, 1)
 plt.title("loss")
 plt.plot(data[0], data[1], label="train")
@@ -20,14 +22,16 @@ plt.plot(data[0], data[4], label="valid")
 plt.legend()
 plt.xlabel("epoch")
 plt.ylabel("loss")
+plt.grid()
 
 plt.subplot(1, 2, 2)
 plt.title("Accuracy")
 plt.plot(data[0], data[2], label="train")
 plt.plot(data[0], data[5], label="valid")
+plt.legend()
 plt.xlabel("epoch")
 plt.ylabel("Accuracy")
-plt.legend()
+plt.grid()
 
 plt.savefig(f"{name}.png")
 plt.show()
