@@ -1,5 +1,16 @@
 # Lecture and Homework 5
 
+## Homework 5: variant calling
+
+`python hw5_wgs.py`
+
+### Result
+```
+       Total   Pass
+SNP   182394 164968
+INDEL  18620  17844
+```
+
 ## Pipeline for WGS
 
 ``` txt
