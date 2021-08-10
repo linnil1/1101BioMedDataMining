@@ -1,6 +1,16 @@
 # Lecture and Homework 5
 
-## Homework 5: variant calling
+There are three parts:
+
+* Variant calling and annotation(Not yet)
+* WGAS(Whole Genome analysis)
+* PRS(Polygenic risk score)
+    * Plink
+    * GenEpi
+    * PRScs
+* Homework 5
+
+# Homework 5: variant calling
 
 `python hw5_wgs.py`
 
@@ -11,7 +21,17 @@ SNP   182394 164968
 INDEL  18620  17844
 ```
 
-## Pipeline for WGS
+# Pipeline for WGS
+
+Read the large vcf contains 1200 samples to plink
+
+Run association test and plot the result
+
+`python pipeline_wgs.py`
+
+## Result
+
+QC
 
 ``` txt
 1200 samples (0 females, 0 males, 1200 ambiguous; 1200 founders) loaded from
@@ -31,7 +51,7 @@ Calculating allele frequencies... done.
 247772 variants remaining after main filters.
 ```
 
-Result
+File sturcture
 
 ```
 data/
@@ -70,33 +90,23 @@ First 5 p-value allele
 ![QQplot](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw5/data/1627841832.8930326.log.png)
 
 
-## Pipeline for GenEpi
+# Pipeline for PRS
 
-Set training test ratio 9:1 from 1000(control) + 200(case) samples from Plink
+Download data from https://github.com/MareesAT/GWA_tutorial
+
+Set training test ratio 4:1 from 56(control) + 56(case) samples from Plink
 
 `python pipeline_prs.py`
 
 ### Result
 
 ```
-data/                                 
-├── example_wgs.plink.filter.pgen   
-├── example_wgs.plink.filter.psam
-├── example_wgs.plink.filter.pvar
-├── example_wgs.plink.filter.test.gen
-├── example_wgs.plink.filter.test.id.csv
-├── example_wgs.plink.filter.test.log
-├── example_wgs.plink.filter.test.sample
-├── example_wgs.plink.filter.test.sample.onlypheno.csv
-├── example_wgs.plink.filter.tmp.gen
-├── example_wgs.plink.filter.tmp.log
-├── example_wgs.plink.filter.tmp.sample
-├── example_wgs.plink.filter.train.gen
-├── example_wgs.plink.filter.train.id.csv
-├── example_wgs.plink.filter.train.log         
-├── example_wgs.plink.filter.train.sample
-├── example_wgs.plink.filter.train.sample.onlypheno.csv
-├── geneepi
+data/
+├── HapMap_3_r3_1.bed
+├── HapMap_3_r3_1.bim
+├── HapMap_3_r3_1.fam
+├── HapMap_3_r3_1.plink.afreq
+├── HapMap_3_r3_1.plink.geneepi
 │   ├── crossGeneResult
 │   │   ├── Classifier.pkl
 │   │   ├── Feature.csv
@@ -104,37 +114,151 @@ data/
 │   │   ├── GenEpi_Prevalence_CV.png
 │   │   ├── GenEpi_ROC_CV.png
 │   │   └── Result.csv
-│   ├── GenEpi_Log_20210807-0822.txt
 │   ├── isolatedValidation
 │   │   ├── GenEpi_PGS_ISO.png
 │   │   ├── GenEpi_Prevalence_ISO.png
 │   │   └── GenEpi_ROC_ISO.png
+├── HapMap_3_r3_1.plink.pgen
+├── HapMap_3_r3_1.plink.plinkprs.score.log
+├── HapMap_3_r3_1.plink.plinkprs.score.roc.png
+├── HapMap_3_r3_1.plink.plinkprs.score.sscore
+├── HapMap_3_r3_1.plink.prscs.merge.txt
+├── HapMap_3_r3_1.plink.prscs_pst_eff_a1_b0.5_phiauto_chr10.txt
+├── HapMap_3_r3_1.plink.prscs_pst_eff_a1_b0.5_phiauto_chr11.txt
+├── HapMap_3_r3_1.plink.prscs_pst_eff_a1_b0.5_phiauto_chr12.txt
+├── HapMap_3_r3_1.plink.prscs_pst_eff_a1_b0.5_phiauto_chr13.txt
+├── HapMap_3_r3_1.plink.prscs_pst_eff_a1_b0.5_phiauto_chr14.txt
+├── HapMap_3_r3_1.plink.prscs_pst_eff_a1_b0.5_phiauto_chr15.txt
+├── HapMap_3_r3_1.plink.prscs_pst_eff_a1_b0.5_phiauto_chr16.txt
+├── HapMap_3_r3_1.plink.prscs_pst_eff_a1_b0.5_phiauto_chr17.txt
+├── HapMap_3_r3_1.plink.prscs_pst_eff_a1_b0.5_phiauto_chr18.txt
+├── HapMap_3_r3_1.plink.prscs_pst_eff_a1_b0.5_phiauto_chr19.txt
+├── HapMap_3_r3_1.plink.prscs_pst_eff_a1_b0.5_phiauto_chr1.txt
+├── HapMap_3_r3_1.plink.prscs_pst_eff_a1_b0.5_phiauto_chr20.txt
+├── HapMap_3_r3_1.plink.prscs_pst_eff_a1_b0.5_phiauto_chr21.txt
+├── HapMap_3_r3_1.plink.prscs_pst_eff_a1_b0.5_phiauto_chr22.txt
+├── HapMap_3_r3_1.plink.prscs_pst_eff_a1_b0.5_phiauto_chr2.txt
+├── HapMap_3_r3_1.plink.prscs_pst_eff_a1_b0.5_phiauto_chr3.txt
+├── HapMap_3_r3_1.plink.prscs_pst_eff_a1_b0.5_phiauto_chr4.txt
+├── HapMap_3_r3_1.plink.prscs_pst_eff_a1_b0.5_phiauto_chr5.txt
+├── HapMap_3_r3_1.plink.prscs_pst_eff_a1_b0.5_phiauto_chr6.txt
+├── HapMap_3_r3_1.plink.prscs_pst_eff_a1_b0.5_phiauto_chr7.txt
+├── HapMap_3_r3_1.plink.prscs_pst_eff_a1_b0.5_phiauto_chr8.txt
+├── HapMap_3_r3_1.plink.prscs_pst_eff_a1_b0.5_phiauto_chr9.txt
+├── HapMap_3_r3_1.plink.prscs.score.log
+├── HapMap_3_r3_1.plink.prscs.score.roc.png
+├── HapMap_3_r3_1.plink.prscs.score.sscore
+├── HapMap_3_r3_1.plink.psam
+├── HapMap_3_r3_1.plink.pvar
+├── HapMap_3_r3_1.plink.test.assoc.bed
+├── HapMap_3_r3_1.plink.test.assoc.bim
+├── HapMap_3_r3_1.plink.test.assoc.fam
+├── HapMap_3_r3_1.plink.test.assoc.log
+├── HapMap_3_r3_1.plink.test.assoc.old.assoc
+├── HapMap_3_r3_1.plink.test.assoc.old.csv
+├── HapMap_3_r3_1.plink.test.assoc.old.hh
+├── HapMap_3_r3_1.plink.test.assoc.old.log
+├── HapMap_3_r3_1.plink.test.gen
+├── HapMap_3_r3_1.plink.test.id.csv
+├── HapMap_3_r3_1.plink.test.log
+├── HapMap_3_r3_1.plink.test.sample
+├── HapMap_3_r3_1.plink.test.sample.onlypheno.csv
+├── HapMap_3_r3_1.plink.tmp.gen
+├── HapMap_3_r3_1.plink.tmp.log
+├── HapMap_3_r3_1.plink.tmp.sample
+├── HapMap_3_r3_1.plink.train.assoc.bed
+├── HapMap_3_r3_1.plink.train.assoc.bim
+├── HapMap_3_r3_1.plink.train.assoc.csv
+├── HapMap_3_r3_1.plink.train.assoc.fam
+├── HapMap_3_r3_1.plink.train.assoc.log
+├── HapMap_3_r3_1.plink.train.assoc.old.assoc
+├── HapMap_3_r3_1.plink.train.assoc.old.csv
+├── HapMap_3_r3_1.plink.train.assoc.old.hh
+├── HapMap_3_r3_1.plink.train.assoc.old.log
+├── HapMap_3_r3_1.plink.train.assoc.pgen
+├── HapMap_3_r3_1.plink.train.assoc.PHENO1.glm.logistic
+├── HapMap_3_r3_1.plink.train.assoc.psam
+├── HapMap_3_r3_1.plink.train.assoc.pvar
+├── HapMap_3_r3_1.plink.train.gen
+├── HapMap_3_r3_1.plink.train.id.csv
+├── HapMap_3_r3_1.plink.train.log
+├── HapMap_3_r3_1.plink.train.sample
+├── HapMap_3_r3_1.plink.train.sample.onlypheno.csv
+├── ldblk_1kg_eas
+│   ├── ldblk_1kg_chr10.hdf5
+│   ├── ldblk_1kg_chr11.hdf5
+│   ├── ldblk_1kg_chr12.hdf5
+│   ├── ldblk_1kg_chr13.hdf5
+│   ├── ldblk_1kg_chr14.hdf5
+│   ├── ldblk_1kg_chr15.hdf5
+│   ├── ldblk_1kg_chr16.hdf5
+│   ├── ldblk_1kg_chr17.hdf5
+│   ├── ldblk_1kg_chr18.hdf5
+│   ├── ldblk_1kg_chr19.hdf5
+│   ├── ldblk_1kg_chr1.hdf5
+│   ├── ldblk_1kg_chr20.hdf5
+│   ├── ldblk_1kg_chr21.hdf5
+│   ├── ldblk_1kg_chr22.hdf5
+│   ├── ldblk_1kg_chr2.hdf5
+│   ├── ldblk_1kg_chr3.hdf5
+│   ├── ldblk_1kg_chr4.hdf5
+│   ├── ldblk_1kg_chr5.hdf5
+│   ├── ldblk_1kg_chr6.hdf5
+│   ├── ldblk_1kg_chr7.hdf5
+│   ├── ldblk_1kg_chr8.hdf5
+│   ├── ldblk_1kg_chr9.hdf5
+│   └── snpinfo_1kg_hm3
+└── HapMap_3_r3_1.plink.log
 ```
 
-
+## GenEpi Result
 Result.csv
 ```
 rsid,weight,chi-square_log_p-value,odds_ratio,genotype_frequency,geneSymbol,singleGeneScore
-AX-15754082_AB*AX-15754122_AB,0.8735982990866694,6.050256246818921,2.6271186440677967,0.1962962962962963,PCLO,0.3092269326683292
-AX-12970194_AB*AX-11624873_AA,0.4034164073259051,5.473852277168914,2.875,0.1,RASGRF1,0.24913494809688583
-AX-12970197_AB*AX-11624873_AA,0.538784200325037,5.746936611004748,2.931219465466041,0.10185185185185185,RASGRF1,0.24913494809688583
+rs3762853_BB*rs9992448_AB,-0.11543565207945841,4.204186598424092,0.07483552631578948,0.43333333333333335,PALLD,0.7209302325581395
+rs4299547_BB*rs9992448_AB,-0.5566501318119521,4.204186598424092,0.07483552631578948,0.43333333333333335,PALLD,0.7209302325581395
+rs3828493_BB*rs9992448_AB,-0.42899473351341066,4.204186598424092,0.07483552631578948,0.43333333333333335,PALLD,0.7209302325581395
+rs17612303_AB*rs2712119_AB,1.795644449983088,4.016978977733641,29.333333333333332,0.2111111111111111,PALLD,0.7209302325581395
+rs17612333_AB*rs2712119_AB,0.5507303999085751,4.016978977733641,29.333333333333332,0.2111111111111111,PALLD,0.7209302325581395
+rs4319500_BB*rs7937953_BB,2.4649160138321387,4.016978977733641,29.333333333333332,0.2111111111111111,TEAD1,0.64
+rs527705_AB*rs12684860_AB,2.4756518328497,4.057003260230927,14.636363636363637,0.28888888888888886,TTC39B,0.6666666666666666
+rs7144755_BB*rs9783629_BB,-2.699620338928539,4.198304911892498,0.07692307692307693,0.4,NRXN3,0.7741935483870969
+rs7175309_AB*rs17794062_BB,-2.1395859533238815,4.274731455806096,0.0625,0.3,AGBL1,0.7777777777777778
 ```
 
 Statistic
 ```
 Training:
-AUC: 0.61; Specificity: 0.76; Sensitivity: 0.49
+AUC: 0.95; Specificity: 0.89; Sensitivity: 0.82
 
 Testing:
-tp=  4 fn= 16
-fp= 27 tn= 73
-specificity: 0.73
-sensitivity: 0.20
-accuracy:    0.64
-precision:   0.20
-recall:      0.20
-f1 score:    0.20
-AUC:         0.47
+tp=  2 fn=  9
+fp=  4 tn=  7
+specificity: 0.64
+sensitivity: 0.18
+accuracy:    0.41
+precision:   0.18
+recall:      0.18
+f1 score:    0.18
+AUC:         0.40
+```
+(Note: this is very small training set, that why it perform bad.
+
+![ROCcurve](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw5/data/HapMap_3_r3_1.plink.geneepi/isolatedValidation/GenEpi_ROC_ISO.png)
+
+## PRScs Result
+
+```
+AUC:         0.56
 ```
 
-![ROCcurve](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw5/data/geneepi/isolatedValidation/GenEpi_ROC_ISO.png")
+![ROCcurve](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw5/data/HapMap_3_r3_1.plink.PRScs.score.roc.png)
+
+## Plink Reulst
+
+```
+AUC:         0.51
+```
+
+![ROCcurve](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw5/data/HapMap_3_r3_1.plink.plinkprs.score.roc.png)
+

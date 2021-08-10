@@ -7,8 +7,9 @@ def run(cmd):
     os.system(cmd)
 
 
-def docker_run(image, cmd):
-    run(f"docker run -it --rm --security-opt label=disable -v $PWD:/app "
+def docker_run(image, cmd, other=""):
+    run(f"docker run -it --rm -v $PWD:/app "
+        f"--security-opt label=disable {other} "
         f"-w /app {image} {cmd}")
 
 
