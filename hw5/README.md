@@ -15,6 +15,8 @@ There are three parts:
 `python hw5_wgs.py`
 
 ### Result
+
+`data/SRR702068.hg38_multianno.vcf.statistics.csv`
 ```
        Total   Pass
 SNP   182394 164968
@@ -25,7 +27,7 @@ INDEL  18620  17844
 
 Read the large vcf contains 1200 samples to plink
 
-Run association test and plot the result
+Run QC, association test and plot the result
 
 `python pipeline_wgs.py`
 
@@ -86,17 +88,22 @@ First 5 p-value allele
 39829        2 239689546 AX-11700303   T   C  T  ADD   1190 0.636032   0.116145 -3.89604 9.77768e-05
 ```
 
-![ManhattanPlot](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw5/data/1627841832.8930326.confusion_matrix.png)
-![QQplot](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw5/data/1627841832.8930326.log.png)
+![ManhattanPlot](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw5/data/example_wgs.plink.filter.assoc.manhattan.png)
+![QQplot](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw5/data/example_wgs.plink.filter.assoc.qqplot.png)
 
 
 # Pipeline for PRS
 
 Download data from https://github.com/MareesAT/GWA_tutorial
 
-Set training test ratio 4:1 from 56(control) + 56(case) samples from Plink
+Load the HapMap_3_r3_1 by Plink and doesn't QC
 
-`python pipeline_prs.py`
+Set training test ratio 4:1 from 56(control) + 56(case) samples
+( i.e 45+45 for train and 11+11 for test )
+
+Run PRS by plink odds ratio, GenEpi and PRScs
+
+Code: `python pipeline_prs.py`
 
 ### Result
 
@@ -227,6 +234,7 @@ rs7175309_AB*rs17794062_BB,-2.1395859533238815,4.274731455806096,0.0625,0.3,AGBL
 ```
 
 Statistic
+
 ```
 Training:
 AUC: 0.95; Specificity: 0.89; Sensitivity: 0.82
@@ -242,7 +250,9 @@ recall:      0.18
 f1 score:    0.18
 AUC:         0.40
 ```
+
 (Note: this is very small training set, that why it perform bad.
+Also I use larger p-value as threshold to filter the gene set)
 
 ![ROCcurve](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw5/data/HapMap_3_r3_1.plink.geneepi/isolatedValidation/GenEpi_ROC_ISO.png)
 
@@ -252,7 +262,7 @@ AUC:         0.40
 AUC:         0.56
 ```
 
-![ROCcurve](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw5/data/HapMap_3_r3_1.plink.PRScs.score.roc.png)
+![ROCcurve](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw5/data/HapMap_3_r3_1.plink.prscs.score.roc.png)
 
 ## Plink Reulst
 
@@ -261,4 +271,3 @@ AUC:         0.51
 ```
 
 ![ROCcurve](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw5/data/HapMap_3_r3_1.plink.plinkprs.score.roc.png)
-

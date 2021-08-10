@@ -47,11 +47,11 @@ def wgs_regression():
     docker_run(image_plink,
                f"plink2 --make-pgen --pfile {name} "
                f"--glm --out {name}.assoc")
+    run(f"ln -s {name.split('/')[1]}.PHENOTYPE.glm.logistic {name}.csv")
 
 
 # --- Plot --- #
 def wgs_plot():
-    run(f"ln -s {name.split('/')[1]}.PHENOTYPE.glm.logistic {name}.csv")
     docker_run(image_qqman, f"Rscript draw_manhattan.R {name}")
 
 

@@ -59,9 +59,9 @@ def split_train_test():
     data = data.dropna().reset_index()
     data["PHENO1"] = data["PHENO1"].astype(np.int)
 
-    # origin 165 samples: 85 females, 80 males
-    # train   90 samples: 45case, 45 control
-    # test    22 samples: 11case, 11 control
+    # origin 165 samples: 56 case, 56 control, other no phenotype
+    # train   90 samples: 45 case, 45 control
+    # test    22 samples: 11 case, 11 control
     np.random.seed(2021)
     id_case = np.where(data["PHENO1"] == 0)[0]
     id_ctrl = np.where(data["PHENO1"] == 1)[0]
@@ -116,18 +116,17 @@ def prscs():
     """ https://github.com/getian107/PRScs """
     n_sample = len(pd.read_csv(f"{name}.train.id.csv", header=None))
     name_out = name + ".prscs"
-    """
     # this takes 40 * 22 mins
     # run(f"THREADS={thread} python3 PRScs/PRScs.py "
     docker_run(image_prscs,
-        f"python3 /opt/PRScs.py "
-        f"--ref_dir data/ldblk_1kg_eas "
-        f"--bim_prefix {name}.train.assoc "
-        f"--sst_file {name}.train.assoc.old.csv "
-        f"--n_gwas {n_sample} --out_dir {name_out}",
-        f"-e THREADS={thread}")
-    """
+               f"python3 /opt/PRScs.py "
+               f"--ref_dir data/ldblk_1kg_eas "
+               f"--bim_prefix {name}.train.assoc "
+               f"--sst_file {name}.train.assoc.old.csv "
+               f"--n_gwas {n_sample} --out_dir {name_out}",
+               f"-e THREADS={thread}")
     run(f"cat {name_out}*.txt > {name_out}.merge.txt")
+
     # apply prs
     docker_run(image_plink,
                f"plink2 --bfile {name}.train.assoc "
@@ -192,34 +191,34 @@ def validation(title=""):
 
 
 if __name__ == "__main__":
-    # download_hapmap()
-    # createPlink()
+    download_hapmap()
+    createPlink()
     name = name + ".plink"
-    # split_train_test()
+    split_train_test()
 
     # Geneepi
-    # plink_export_oxford(".train")
-    # plink_export_oxford(".test")
-    # docker_build(image_geneepi, dockerfile_geneepi)
-    # geneepi()
+    plink_export_oxford(".train")
+    plink_export_oxford(".test")
+    docker_build(image_geneepi, dockerfile_geneepi)
+    geneepi()
 
     # prscs
-    # download_prscs()
-    # plink_export_plink19(".train")
-    # plink_export_plink19(".test")
-    # docker_build(image_prscs, dockerfile_prscs)
-    prscs()
+    download_prscs()
+    plink_export_plink19(".train")
+    plink_export_plink19(".test")
+    docker_build(image_prscs, dockerfile_prscs)
+    prscs()  # takes 10hr to run
 
     # plink
-    # plink_prs()
+    plink_prs()
 
     # validate prscs and plink
     base_name = name
-    # name = base_name + ".plinkprs.score"
-    # validation("plink_prs")
+    name = base_name + ".plinkprs.score"
+    validation("plink_prs")
     # name = base_name + ".plinkprs.train.score"
-    # validation("plink_prs train")
+    # validation("plink_prs train")  # -> AUC = 1
     name = base_name + ".prscs.score"
     validation("prscs")
-    name = base_name + ".prscs.train.score"
-    validation("prscs train")
+    # name = base_name + ".prscs.train.score"
+    # validation("prscs train")  # -> AUC = 1

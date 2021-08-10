@@ -6,13 +6,11 @@ import pandas as pd
 # import seaborn as sns
 import matplotlib
 import matplotlib.pyplot as plt
-plt.ioff()
-matplotlib.use("TkAgg")
+plt.rcParams['figure.figsize'] = (12, 9)
 
 # read data
 from sklearn.datasets import load_digits
 digits = load_digits()
-"""
 fig, ax_array = plt.subplots(20, 20)
 axes = ax_array.flatten()
 for i, ax in enumerate(axes):
@@ -20,7 +18,6 @@ for i, ax in enumerate(axes):
     plt.setp(axes, xticks=[], yticks=[], frame_on=False)
     plt.tight_layout(h_pad=0.5, w_pad=0.01)
 plt.show()
-"""
 
 
 def scatterPlot(x, y, label):
@@ -45,15 +42,15 @@ pca_embedding = pca.transform(digits.data)
 
 ## PCA plot
 plt.title("Label on PCA")
-# scatterPlot(pca_embedding[:, 0], pca_embedding[:, 1], digits.target)
-# plt.show()
+scatterPlot(pca_embedding[:, 0], pca_embedding[:, 1], digits.target)
+plt.show()
 
 # UMAP
 import umap
 umap_embedding = umap.UMAP(n_components=2).fit_transform(digits.data)
 plt.title("Label on UMAP")
-# scatterPlot(umap_embedding[:, 0], umap_embedding[:, 1], digits.target)
-# plt.show()
+scatterPlot(umap_embedding[:, 0], umap_embedding[:, 1], digits.target)
+plt.show()
 
 # Cluster by kmean
 import sklearn.cluster as cluster
