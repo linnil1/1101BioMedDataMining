@@ -1,5 +1,11 @@
 # HW4 Deep Learning
 
+## Clustering (Lecture)
+
+Evaluate Umap clusering on mnist
+
+`umap_digit.py` 
+
 ## Data
 
 cifar10, first 10000 as training set

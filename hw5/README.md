@@ -1,6 +1,6 @@
 # Lecture and Homework 5
 
-There are three parts:
+There are four main parts:
 
 * Variant calling and annotation(Not yet)
 * WGAS(Whole Genome analysis)
@@ -14,7 +14,7 @@ There are three parts:
 
 `python hw5_wgs.py`
 
-### Result
+## Result
 
 `data/SRR702068.hg38_multianno.vcf.statistics.csv`
 ```
@@ -105,7 +105,7 @@ Run PRS by plink odds ratio, GenEpi and PRScs
 
 Code: `python pipeline_prs.py`
 
-### Result
+## Result
 
 ```
 data/
