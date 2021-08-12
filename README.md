@@ -26,3 +26,7 @@ https://github.com/linnil1/1101BioMedDataMining/tree/main/hw4
 ## HW5: Variant calling and PRS
 
 https://github.com/linnil1/1101BioMedDataMining/tree/main/hw5
+
+## HW6: ChIP-seq analysis
+
+https://github.com/linnil1/1101BioMedDataMining/tree/main/hw6

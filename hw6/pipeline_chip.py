@@ -1,6 +1,7 @@
 from utils import run, docker_run, docker_build, googleDownload
 import pandas as pd
 import os
+import numpy as np
 
 # --- Docker Image --- #
 image_fastqc      = "quay.io/biocontainers/fastqc:0.11.9--0"
@@ -274,25 +275,34 @@ def ezgeno():
     """)
 
 
+def hw6():
+    df = pd.read_csv(f"{name_merge}.idr", sep="\t", header=None)
+    count = df.groupby([0]).size().rename("Count").rename_axis("Chr")
+    count.to_csv(f"{name_merge}.idr.count.csv")
+    print("Peak per chromsome:", count)
+    print("Num of Peak IDR < 0.05: ", sum(df[4] > -125 * np.log2(0.05)))
+
+
 if __name__ == "__main__":
-    # download()
+    download()
     suffix = ""
-    # fastqc()
-    # trimmomatic()
+    fastqc()
+    trimmomatic()
     suffix += ".trim"
-    # bbmapFilterTile()
+    bbmapFilterTile()
     suffix += ".trimtile"
-    # fastqc()
-    # bowtiePre()
-    # bowtie()
-    suffix += ".bowtie.filter.dedup"
-    # macs2()
+    fastqc()
+    bowtiePre()
+    bowtie()
+    ffix += ".bowtie.filter.dedup"
+    macs2()
     suffix += ".macs2"
-    # meme()
-    # mergePeak()
+    meme()
+    mergePeak()
+    hw6()
 
     # Ezgeno
-    # docker_build(image_ezgeno, "docker_ezgeno.dockerfile")
-    # run("git clone https://github.com/ailabstw/ezGeno.git")
-    # ezgenoPre()
-    # ezgeno()
+    docker_build(image_ezgeno, "docker_ezgeno.dockerfile")
+    run("git clone https://github.com/ailabstw/ezGeno.git")
+    ezgenoPre()
+    ezgeno()
