@@ -15,10 +15,18 @@ Reference pipeline https://www.pnas.org/content/118/20/e2026754118
 
 Lecture: https://hackmd.io/TJ7ree27SveRzdM6gEvlQA?view
 
-Discovered Logo
+One of Discovered Logo
 
 ![logo1](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw6/data/ENCFF000YNF.trim.trimtile.bowtie.filter.dedup.macs2.summit.extend.excluded.top.peaks.meme/meme_out/logo1.png)
 ![logo_rc1](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw6/data/ENCFF000YNF.trim.trimtile.bowtie.filter.dedup.macs2.summit.extend.excluded.top.peaks.meme/meme_out/logo_rc1.png)
+
+One of Peak shown in IGV
+
+![Peak](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw6/data/ENCFF000YNF.trim.trimtile.bowtie.filter.dedup.macs2.peaks.sort.narrowPeak.igv.png)
+
+And significant sites found by MEME
+
+![Sites](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw6/data/ENCFF000YNF.trim.trimtile.bowtie.filter.dedup.macs2.summit.extend.excluded.top.peaks.meme.motif.svg)
 
 ## ezGeno
 
@@ -190,4 +198,4 @@ X             118
 Num of Peak IDR < 0.05:  2485
 ```
 
-[data/ENCFF000YN.merge.idr.count.csv](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw6/data/ENCFF000YN.merge.idr.count.csv)
+[data/ENCFF000YN.merge.idr.count.csv](https://github.com/linnil1/1101BioMedDataMining/blob/main/hw6/data/ENCFF000YN.merge.idr.count.csv)
