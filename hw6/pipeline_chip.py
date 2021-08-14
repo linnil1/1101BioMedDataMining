@@ -271,6 +271,7 @@ def ezgeno():
                --load {name}.ezgeno.model \
                --data_path {name}.pos.fa \
                --data_name {name}.ezgeno \
+               --use_cuda=False \
                --target_layer_names "[2]"
     """)
 
@@ -294,7 +295,7 @@ if __name__ == "__main__":
     fastqc()
     bowtiePre()
     bowtie()
-    ffix += ".bowtie.filter.dedup"
+    suffix += ".bowtie.filter.dedup"
     macs2()
     suffix += ".macs2"
     meme()
@@ -303,6 +304,6 @@ if __name__ == "__main__":
 
     # Ezgeno
     docker_build(image_ezgeno, "docker_ezgeno.dockerfile")
-    run("git clone https://github.com/ailabstw/ezGeno.git")
+    # run("git clone https://github.com/ailabstw/ezGeno.git")
     ezgenoPre()
     ezgeno()

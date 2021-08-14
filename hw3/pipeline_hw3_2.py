@@ -2,7 +2,7 @@ import io
 import gzip
 import zipfile
 import pandas as pd
-from pipeline_2 import *
+from pipeline_de import *
 from pipeline_hw3_1 import determine_fastq
 
 

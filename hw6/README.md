@@ -1,9 +1,8 @@
-# Week6 Lecture and Homework
+# Week6 ChIP-seq Analysis
 
-TOC
-
+Two analysis methods are studied in the lecture
 * ChIP-Seq Analysis
-* Use ezGeno to find motif from fasta
+* Using ezGeno to find motif from fasta
 
 Both pipeline written in 
 
@@ -15,7 +14,7 @@ Reference pipeline https://www.pnas.org/content/118/20/e2026754118
 
 Lecture: https://hackmd.io/TJ7ree27SveRzdM6gEvlQA?view
 
-One of Discovered Logo
+One of Discovered Logo (And it's reverse complement)
 
 ![logo1](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw6/data/ENCFF000YNF.trim.trimtile.bowtie.filter.dedup.macs2.summit.extend.excluded.top.peaks.meme/meme_out/logo1.png)
 ![logo_rc1](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw6/data/ENCFF000YNF.trim.trimtile.bowtie.filter.dedup.macs2.summit.extend.excluded.top.peaks.meme/meme_out/logo_rc1.png)
@@ -30,10 +29,13 @@ And significant sites found by MEME
 
 ## ezGeno
 
-If you don't have GPU mechine, you need to modified some code after git clone
+Using Meta Learning to learn a model to discover the motif in these fasta files.
+
+If you don't have GPU mechine, you need to [modified some code](https://github.com/ailabstw/ezGeno/pull/3) after git clone
 
 Training Result
-```
+
+``` txt
 test auc: 0.930272
 Epoch 30
 Training acc: 92.50%
@@ -48,16 +50,15 @@ Test AUC score: 0.9309
 ```
 
 Logo
-```
+
+``` txt
 >seq_320_20_31_tensor([[0.5869]], grad_fn=<AddmmBackward>)
 TCCGTTGTGGTT
 ```
 
 [ezGeno Visualization](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw6/data/ezgeno.ezgeno_seq_pos_heatmap.pdf)
 
-
-
-## Result
+### Directory Structure
 
 ```
 data/
@@ -161,9 +162,11 @@ data/
 
 ## Homework6
 
-See hw6 function in `pipeline_chip.py`
+Calculate peak per chromsome.
 
-```
+See `hw6` function in `pipeline_chip.py`
+
+``` txt
 Peak per chromsome:
 1             567
 10            234

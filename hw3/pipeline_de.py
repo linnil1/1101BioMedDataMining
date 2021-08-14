@@ -1,4 +1,4 @@
-from pipeline_1 import *
+from pipeline_blast import *
 
 
 hg38              = "data/GRCh38_latest_genomic"

@@ -127,6 +127,12 @@ def prscs():
                f"-e THREADS={thread}")
     run(f"cat {name_out}*.txt > {name_out}.merge.txt")
 
+    # show prs
+    df = pd.read_csv(f"{name_out}.merge.txt", sep="\t", header=None)
+    df[6] = df[5].abs()
+    print("PRScs first 10 highest weight")
+    print(df.sort_values(6, ascending=False).iloc[:10, :6])
+
     # apply prs
     docker_run(image_plink,
                f"plink2 --bfile {name}.train.assoc "
@@ -149,6 +155,10 @@ def plink_prs():
     df = df.dropna()
     df["BETA"] = np.log(df["OR"])
     df.to_csv(f"{name_train}.csv", sep=" ", index=False, header=False)
+
+    # display
+    print("Plink first 10 lowest P-value")
+    print(df.sort_values("P", ascending=True).iloc[:10])
 
     # apply prs
     docker_run(image_plink,

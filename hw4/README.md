@@ -1,21 +1,26 @@
-# HW4 Deep Learning
+# Week4: Clustering and Deep Learning
 
 ## Clustering (Lecture)
 
-Evaluate Umap clusering on mnist
+Using ARI and AMI to Evaluate PCA/UMAP + KMeans Clusering on MNIST 
 
 `umap_digit.py` 
 
-## Data
+## Deep Learning
+
+Instead of Tensorflow and Keras in the lecture,
+I use PyTorch to train a model
+
+### Data
 
 cifar10, first 10000 as training set
 
-## Method
+### Method
 
 * Darknet-53 
 * + Smaller and thinner
 * + image argumentation(random crop, color jitter)
-* + dropout 0.2
+* + dropout 0.1
 * Cosine annealing SGD lr = 0.1
 * batch_size = 16, epoches = 400
 
@@ -25,17 +30,14 @@ Training a new model
 python3 hw4.py
 ```
 
-## Result
+### Result
 
 Download my trainned data https://drive.google.com/file/d/15WD8h9Qm-VL1kYUKlFCL8oNqPNqnuYR-/view?usp=sharing
+
+and Calculate f1 and Confusion Matrix
+
 ``` bash
 wget "https://drive.google.com/uc?export=download&id=15WD8h9Qm-VL1kYUKlFCL8oNqPNqnuYR-" -O 1627841832.8930326.pth
-```
-
-
-Calculate f1 and Confusion Matrix
-
-``` bash
 python3 hw4_log.py 1627841832.8930326.log
 python3 hw4_evalute.py 1627841832.8930326
 ```
@@ -61,3 +63,9 @@ F1        0.8546072913161492
 
 ![Confusion Matrix](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw4/1627841832.8930326.confusion_matrix.png)
 ![Loss and acc](https://raw.githubusercontent.com/linnil1/1101BioMedDataMining/main/hw4/1627841832.8930326.log.png)
+
+### Supplement
+
+I train this model using all training data(50000 images), other parameters remain same.
+
+The accuracy can achieve 0.922

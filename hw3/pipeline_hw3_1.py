@@ -1,5 +1,5 @@
 import pandas as pd
-from pipeline_1 import *
+from pipeline_blast import *
 
 
 def getSample():

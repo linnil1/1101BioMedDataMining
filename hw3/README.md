@@ -1,16 +1,16 @@
-# Class3 and HW3
+# Week3: Blast and Gene Expression Analysis
 
 ## Class3
 
 I rewrite the pipeline in class3 by python + docker
 
-* `pipeline_1.py` `pipeline_2.py`
+* `pipeline_blast.py` for Blast(tutorial)
+* `pipeline_de.py` for Differential Expression Analysis
 
 Reference
 
 * class3 https://rnabio.org/module-01-inputs/0001/05/01/RNAseq_Data/
 * galaxy deseq2 code https://github.com/galaxyproject/tools-iuc/blob/master/tools/deseq2/deseq2.R
-
 
 ## HW3
 
@@ -23,7 +23,8 @@ All script are written in Python except docker executing
 
 ## Result
 
-Class pipeline
+### Directory Structure
+
 ```
 data
 ├── BLAST_sample_file.blastn.1.1.all_seqs.fa
@@ -180,7 +181,7 @@ data
 └── t_data.ctab
 ```
 
-Homework3 Part 1
+### Homework3 Part 1
 
 ```
 [Question 2] What is the file format that you just download?
@@ -202,7 +203,7 @@ GCTTGGCGGAGGCGGGGAAGGCCCGCAGGCGGCGCCTCAGCCGGGGTTGGCGCTGAGGGGAGAGGGCGGGGAAAAGGTGG
 PREDICTED: Homo sapiens major histocompatibility complex, class I, E (HLA-E), transcript variant X1, mRNA
 ```
 
-Homework3 Part 2
+### Homework3 Part 2
 
 ```
 [Question 2] What is the file format that you download from "http://genomedata.org/rnaseq-tutorial/practical.tar"?
