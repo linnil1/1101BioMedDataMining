@@ -1,6 +1,6 @@
 # 2021 Summer Bio-Datamining
 
-## Week1: Homework of Git
+## Week1: Git Homework
 
 Fork, create a branch, answer question, commit, push and finally pull request.
 
@@ -8,7 +8,7 @@ Fork, create a branch, answer question, commit, push and finally pull request.
 bash hw1.sh
 ```
 
-## Week2: Homework of Python
+## Week2: Python Homework
 
 Read vcf and calculate number of ["0/0", "0/1", "1/0", "1/1"] in each chromosome.
 
@@ -17,9 +17,8 @@ cd hw2
 python3 hw2.easy.py
 ```
 
-However, the input vcf is not available online
-
-`APTVCF0921_del_sort_norm_sample_wgstype_contig_sort.vcf`
+However, the input vcf `APTVCF0921_del_sort_norm_sample_wgstype_contig_sort.vcf`
+is not available online
 
 ## Week3: Blast and Gene Expression Analysis
 

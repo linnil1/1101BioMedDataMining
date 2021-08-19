@@ -6,15 +6,15 @@ Variant Calling and Annotation
 
 Not Yet
 
-## Homework: reading GATK result 
+## Homework: Read GATK result
 
-Read vcf and count pass SNP and Indel.
+Read vcf and count pass SNPs and Indels.
 
 ``` bash
 python hw5_wgs.py
 ```
 
-Result file `data/SRR702068.hg38_multianno.vcf.statistics.csv`
+Result stored in `data/SRR702068.hg38_multianno.vcf.statistics.csv`
 
 ```
        Total   Pass

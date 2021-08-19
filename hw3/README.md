@@ -14,11 +14,11 @@ Reference
 
 ## HW3
 
-Homework pipeline and code:
+Homework pipeline
+(All script are written in Python and execute some commands in docker)
 
-All script are written in Python except docker executing
-
-* `pipeline_hw3_1.py` `pipeline_hw3_2.py`
+* `pipeline_hw3_1.py`
+* `pipeline_hw3_2.py`
 
 
 ## Result
