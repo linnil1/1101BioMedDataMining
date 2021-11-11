@@ -80,8 +80,8 @@ def readSample(file_chipcsv):
             ids.append(id)
 
     print("Total row in sample (chip.csv)", tot)
-    print("  not bottop", non_bottop)
-    print("  bot or top", len(ids), "( unique", len(set(ids)), ")")
+    print("  - not bottop", non_bottop)
+    print("  = bot or top", len(ids), "( unique", len(set(ids)), ")")
     return ids
 
 
@@ -95,9 +95,11 @@ def rsidRead(file_chiprsid):
     """
     m = {}
     no_rsid = 0
+    tot_rsid = 0
     for i in open(file_chiprsid):
         # Name	RsID
         # 1:103380393	rs577266494
+        # 1:118933200	rs199933488,rs566726162
         if "Name" not in i:
             name, rsid = i.strip().split("\t")
             assert name not in m
@@ -105,9 +107,11 @@ def rsidRead(file_chiprsid):
                 no_rsid += 1
             else:
                 m[name] = rsid
+                tot_rsid += len(rsid.split(","))
     print("Total row in chip_rsid", no_rsid + len(m))
-    print("  alleleID without rsid", no_rsid)
-    print("  alleleID with rsid", len(m))
+    print("  - alleleID without rsid", no_rsid)
+    print("  = alleleID with rsid", len(m))
+    print("    * Total rsid", tot_rsid)
     return m
 
 
@@ -128,9 +132,15 @@ def name2rsid(rsid_map, variants):
         if v[0] not in rsid_map:
             no_include += 1
         else:
-            ids.append((*v, rsid_map[v[0]]))
-    print("    sample no rsid mapping from chip_rsid", no_include)
-    print("    sample rsid mapping", len(ids))
+            # multiple mapping
+            # Treat as different variant
+            # remove chrpos
+            for rsid in rsid_map[v[0]].split(','):
+                ids.append(("", *v[1:], rsid))
+    print("    - sample no rsid mapping from chip_rsid", no_include)
+    print("    = sample rsid mapping", len(ids))
+    ids = list(set(ids))
+    print("      = unique rsid/ref/alt", len(ids))
     return ids
 
 
@@ -142,31 +152,40 @@ def alleleidRead(file_clinvar_rsid):
       {alleleid: rsid}
     """
     m = {}
-    tot_allele = 9
+    tot_allele = 0
     no_rsid = 0
+    num_nssv = 0
     dup_map = 0
     for i in open(file_clinvar_rsid):
-        if "AlleleID" not in i:
-            tot_allele += 1
-            alleleid, db, id, updated = i.strip().split("\t")
+        if "AlleleID" in i:  # header
+            continue
+        tot_allele += 1
+        alleleid, db, id, updated = i.strip().split("\t")
+
+        if id.startswith("nssv"):
+            num_nssv += 1
+            continue
+        try:
+            int(id)
             rsid = "rs" + id
-            # 15104   dbSNP   121918057       Oct 19, 2015
-            # 15105   dbSNP   121918057       Oct 19, 2015
-            try:
-                int(id)
-            except:
-                no_rsid += 1
-                continue
-            # assert alleleid not in m
-            # print(i)
-            if alleleid in m:
-                dup_map += 1
-            else:
-                m[alleleid] = rsid
+        except:
+            rsid = id
+        # 15104   dbSNP   121918057       Oct 19, 2015
+        # 15105   dbSNP   121918057       Oct 19, 2015
+        # assert alleleid not in m
+        # print(i)
+        if alleleid in m:
+            # print(alleleid)
+            # Duplicated alleleid
+            dup_map += 1
+            m[alleleid] += "," + rsid
+        else:
+            m[alleleid] = rsid
     print("Total row in clinvar_rsid.txt", tot_allele)
-    print("  no rsid", no_rsid)
-    print("  duplicated", dup_map)
-    print("  success records", len(m))
+    print("  - no rsid", no_rsid)
+    print("  - nssv", num_nssv)
+    print("  - duplicated", dup_map)
+    print("  = success records", len(m))
     return m
 
 
@@ -185,15 +204,14 @@ def clivarRead(file_clinvarvcf):
     clivar = []
     with open(file_clinvarvcf) as vcf:
         for i in vcf:
-            if not i.startswith("#"):
-                break
-        for i in vcf:
+            if i.startswith("#"):
+                continue
             tot_clivar += 1
             cols = i.strip().split("\t")
             # CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
             # 1	861332	1019397	G	A	.	.	ALLELEID=1003021;CLNDISDB=MedGen:CN517202;CLNDN=not_provided;CLNHGVS=NC_000001.10:g.861332G>A;CLNREVSTAT=criteria_provided,_single_submitter;CLNSIG=Uncertain_significance;CLNVC=single_nucleotide_variant;CLNVCSO=SO:0001483;GENEINFO=SAMD11:148398;MC=SO:0001583|missense_variant;ORIGIN=1
             # 1	865628	789256	G	A	.	.	AF_ESP=0.00347;AF_EXAC=0.00622;AF_TGP=0.00280;ALLELEID=707587;CLNDISDB=MedGen:CN517202;CLNDN=not_provided;CLNHGVS=NC_000001.10:g.865628G>A;CLNREVSTAT=criteria_provided,_single_submitter;CLNSIG=Likely_benign;CLNVC=single_nucleotide_variant;CLNVCSO=SO:0001483;GENEINFO=SAMD11:148398;MC=SO:0001583|missense_variant;ORIGIN=1;RS=41285790
-            sig = re.findall(r"CLNSIG=(.*?);", cols[-1])
+            sig = re.findall(r"CLNSIG=([\w/,]+)", cols[-1])
             if not sig:
                 no_sig += 1
                 continue
@@ -209,20 +227,24 @@ def clivarRead(file_clinvarvcf):
 
             rs = re.findall(r"RS=(\w+)", cols[-1])
             if rs and rs[0]:
-                rs = rs[0]
+                rs = "rs" + rs[0]
             else:
-                no_rsid += 1
-                rs = None
-                continue
+                rs = re.findall(r"DBVARID=(\w+)", cols[-1])
+                if rs and rs[0]:
+                    rs = rs[0]
+                else:
+                    no_rsid += 1
+                    rs = ""
 
             # chrpos ref alt allele rs annotation
             chrpos = cols[0] + ":" + cols[1]
             clivar.append([chrpos, cols[3], cols[4], allele, rs, sig])
     print("Total row in Clinvar.csv", tot_clivar)
-    print("  no Annotation", no_sig)
-    print("    no alleleid", no_allele)
-    print("      no rsid", no_rsid)
-    print("        success mapped", len(clivar), "unique:", len(set([i[3] for i in clivar])))
+    print("  - no Annotation", no_sig)
+    print("  - no alleleid", no_allele)
+    print("  = success mapped", len(clivar))
+    print("    * unique alleleid:", len(set([i[3] for i in clivar])))
+    print("    * no rsid", no_rsid)
     return clivar
 
 
@@ -237,30 +259,38 @@ def addRsidOnClinvar(clivar_list, alleleid_map):
     Returns:
       [clinvar_element_rsid]: a list of clivar_element with additional rsid column
     """
-    no_allele_map = 0
     no_allele_not_map = 0
+    clivar_list_filter = []
+    tot_rsid_refalt = 0
+    set_rsid_refalt = {}
+    no_rsid_iconsis = 0
     for i in clivar_list:
         if i[3] in alleleid_map:
-            no_allele_map += 1
             i.append(alleleid_map[i[3]])
+            clivar_list_filter.append(i)
+            for rsid in i[-1].split(','):
+                tot_rsid_refalt += 1
+                if i[4] != rsid:
+                    no_rsid_iconsis += 1
+                if (rsid, i[1], i[2]) in set_rsid_refalt:
+                    pass
+                    # print(set_rsid_refalt[(rsid, i[1], i[2])])
+                    # print(i)
+                set_rsid_refalt[(rsid, i[1], i[2])] = i
         else:
             no_allele_not_map += 1
 
-    print("          no rsid mapping according clinvar_rsid.txt", no_allele_not_map)
-    print("          success rsid mapped", no_allele_map)
-
-    no_rsid_iconsis = 0
-    for i in clivar_list:
-        if "rs" + i[4] != i[-1]:
-            no_rsid_iconsis += 1
-            # print("rsid inconsistent", i)
-    print("          (rsid inconsistent)", no_rsid_iconsis)
-    return clivar_list
+    print("     - no rsid mapping according clinvar_rsid.txt", no_allele_not_map)
+    print("     = success rsid mapped", len(clivar_list_filter))
+    print("       * Total rsid/ref/alt", tot_rsid_refalt)
+    print("       * unique:", len(set_rsid_refalt))
+    print("       * rsid inconsistent", no_rsid_iconsis)
+    return clivar_list_filter
 
 
 def findRefalt(ref, alt, clivars):
     """
-    Find the element in the list with same ref/alt or alt/ref from given ref alt
+    Find a element in the list with same ref/alt or alt/ref from given ref alt
 
     Parameters:
       ref: str
@@ -303,9 +333,9 @@ def mapClinvar(clivar_map, variants_rsid):
             continue
         mapped_clivars.append(cv)
 
-    print("      sample cannot mapped by rsid to clinvar", no_clinvar_rsid)
-    print("      sample cannot find ref/alt with rsid", no_clinvar_alt)
-    print("      sample found clinvar record in rsid", len(mapped_clivars))
+    print("        - sample cannot mapped by rsid to clinvar", no_clinvar_rsid)
+    print("        - sample cannot find ref/alt with rsid", no_clinvar_alt)
+    print("        = sample found clinvar record in rsid", len(mapped_clivars))
     return mapped_clivars
 
 
@@ -319,13 +349,13 @@ def countSignificant(clivar_list):
     Reutnrs:
       dict
     """
-    count = Counter([i[5].split(",")[0] for i in clivar_list])
+    count = Counter([i[5] for i in clivar_list])
     count_header = ['Benign', 'Benign/Likely_benign', 'Likely_benign',
                     'Likely_pathogenic', 'Pathogenic/Likely_pathogenic', 'Pathogenic',
                     'Uncertain_significance', 'drug_response', 'not_provided']
     count = {i: j for i, j in count.items() if i in count_header}
     pprint(count)
-    print("    Total included significant:", sum(count.values()))
+    print("          Total included significant:", sum(count.values()))
     return count
 
 
@@ -345,13 +375,14 @@ if __name__ == "__main__":
     file_chiprsid = "chip_rsid.txt"
     file_output = "ans1.csv"
 
-    clivar_list = clivarRead(file_clinvarvcf)
     alleleid_map = alleleidRead(file_clinvar_rsid)
+    clivar_list = clivarRead(file_clinvarvcf)
     clivar_list = addRsidOnClinvar(clivar_list, alleleid_map)
     clivar_map = defaultdict(list)
     # pprint(countSignificant(clivar_list))
-    for i in clivar_list:
-        clivar_map[i[6]].append(i)
+    for i in clivar_list:  # key=rsid
+        for rsid in i[6].split(','):
+            clivar_map[rsid].append(i)
 
     rsid_map = rsidRead(file_chiprsid)
     variants = readSample(file_chipcsv)
@@ -362,16 +393,3 @@ if __name__ == "__main__":
     with open(file_output, "w") as f:
         for i, j in count.items():
             print(f"{i},{j}", file=f)
-    ans1 = {
-        'Benign': 7221,
-        'Benign/Likely_benign': 2915,
-        'Likely_benign': 2172,
-        'Likely_pathogenic': 3650,
-        'Pathogenic/Likely_pathogenic': 3239,
-        'Pathogenic': 17204,
-        'Uncertain_significance': 3367,
-        'drug_response': 267,
-        'not_provided': 367,
-    }
-    print("real answer")
-    pprint(ans1)
