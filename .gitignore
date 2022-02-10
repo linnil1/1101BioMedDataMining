@@ -6,3 +6,9 @@ data/
 hisat2/
 *.pth
 ezGeno
+final/chip.csv
+final/chip_rsid.txt
+final/clinvar.vcf
+final/clinvar_rsid.txt
+final/Solution.tar
+final/ans.csv

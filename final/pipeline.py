@@ -1,5 +1,6 @@
 import re
 import os
+import sys
 import time
 from collections import defaultdict, Counter
 from pprint import pprint
@@ -137,8 +138,8 @@ def name2rsid(rsid_map, variants):
             # remove chrpos
             for rsid in rsid_map[v[0]].split(','):
                 ids.append(("", *v[1:], rsid))
-    print("    - sample no rsid mapping from chip_rsid", no_include)
-    print("    = sample rsid mapping", len(ids))
+    print("    - no rsid mapping from chip_rsid", no_include)
+    print("    = rsid mapping count", len(ids))
     ids = list(set(ids))
     print("      = unique rsid/ref/alt", len(ids))
     return ids
@@ -184,8 +185,8 @@ def alleleidRead(file_clinvar_rsid):
     print("Total row in clinvar_rsid.txt", tot_allele)
     print("  - no rsid", no_rsid)
     print("  - nssv", num_nssv)
-    print("  - duplicated", dup_map)
-    print("  = success records", len(m))
+    print("  = passed records", len(m) + dup_map)
+    print("    * duplicated alleleID", dup_map)
     return m
 
 
@@ -280,10 +281,10 @@ def addRsidOnClinvar(clivar_list, alleleid_map):
         else:
             no_allele_not_map += 1
 
-    print("     - no rsid mapping according clinvar_rsid.txt", no_allele_not_map)
-    print("     = success rsid mapped", len(clivar_list_filter))
+    print("     - no rsid mapping according to clinvar_rsid.txt", no_allele_not_map)
+    print("     = passed clinvar row", len(clivar_list_filter))
     print("       * Total rsid/ref/alt", tot_rsid_refalt)
-    print("       * unique:", len(set_rsid_refalt))
+    print("       * unique rsid/ref/alt:", len(set_rsid_refalt))
     print("       * rsid inconsistent", no_rsid_iconsis)
     return clivar_list_filter
 
@@ -333,9 +334,9 @@ def mapClinvar(clivar_map, variants_rsid):
             continue
         mapped_clivars.append(cv)
 
-    print("        - sample cannot mapped by rsid to clinvar", no_clinvar_rsid)
-    print("        - sample cannot find ref/alt with rsid", no_clinvar_alt)
-    print("        = sample found clinvar record in rsid", len(mapped_clivars))
+    print("        - cannot mapped to clinvar by rsid", no_clinvar_rsid)
+    print("        - cannot find ref/alt while rsid matched", no_clinvar_alt)
+    print("        = annotated records", len(mapped_clivars))
     return mapped_clivars
 
 
@@ -369,11 +370,19 @@ def tarSolution():
 
 if __name__ == "__main__":
     # download()
-    file_clinvar_rsid = "clinvar_rsid.txt"
-    file_clinvarvcf = "clinvar.vcf"
-    file_chipcsv = "chip.csv"
-    file_chiprsid = "chip_rsid.txt"
-    file_output = "ans1.csv"
+    if len(sys.argv) == 6:
+        file_clinvarvcf, file_clinvar_rsid, \
+                file_chipcsv, file_chiprsid, \
+                file_output = sys.argv[1:]
+        run_tar = False
+    else:
+        # this will only run on my system
+        file_clinvarvcf = "clinvar.vcf"
+        file_clinvar_rsid = "clinvar_rsid.txt"
+        file_chipcsv = "chip.csv"
+        file_chiprsid = "chip_rsid.txt"
+        file_output = "ans1.csv"
+        run_tar = True
 
     alleleid_map = alleleidRead(file_clinvar_rsid)
     clivar_list = clivarRead(file_clinvarvcf)
@@ -393,3 +402,6 @@ if __name__ == "__main__":
     with open(file_output, "w") as f:
         for i, j in count.items():
             print(f"{i},{j}", file=f)
+
+    if run_tar:
+        tarSolution()

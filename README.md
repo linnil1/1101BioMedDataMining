@@ -37,3 +37,7 @@ https://github.com/linnil1/1101BioMedDataMining/tree/main/hw5
 https://github.com/linnil1/1101BioMedDataMining/tree/main/hw6
 
 Note: Protein Structure Prediction (AlphaFold and RosettaFold) is not included in my repo.
+
+## Week?: Mock test before Final
+
+https://github.com/linnil1/1101BioMedDataMining/tree/main/final
