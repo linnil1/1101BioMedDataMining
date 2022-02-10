@@ -41,3 +41,7 @@ Note: Protein Structure Prediction (AlphaFold and RosettaFold) is not included i
 ## Week?: Mock test before Final
 
 https://github.com/linnil1/1101BioMedDataMining/tree/main/final
+
+## Week_last: Final
+
+https://github.com/linnil1/1101BioMedDataMining/tree/main/final2

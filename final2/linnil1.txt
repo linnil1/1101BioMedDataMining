@@ -1,0 +1,65 @@
+Query: chr17:41194312-41279381
+  Total: 11570 variants
+  Catelog:
+    Benign                                                                      675
+    Benign/Likely_benign                                                         41
+    Conflicting_interpretations_of_pathogenicity                                416
+    Likely_benign                                                              1632
+    Likely_pathogenic                                                           123
+    None                                                                          2
+    not_provided                                                               2667
+    Pathogenic                                                                 2883
+    Pathogenic/Likely_pathogenic                                                111
+    Uncertain_significance                                                     3020
+Query: chr19:55228188-55383188
+  Total: 2 variants
+  Catelog:
+    Uncertain_significance                                                        2
+Query: chr1:10000000-20000000
+  Total: 6610 variants
+  Catelog:
+    Affects                                                                       1
+    association                                                                  10
+    Benign                                                                      890
+    Benign,_other                                                                 1
+    Benign/Likely_benign                                                        138
+    Conflicting_interpretations_of_pathogenicity                                271
+    Conflicting_interpretations_of_pathogenicity,_association                     1
+    Conflicting_interpretations_of_pathogenicity,_other                           1
+    drug_response                                                                 1
+    Likely_benign                                                              1790
+    Likely_pathogenic                                                           192
+    None                                                                          1
+    not_provided                                                                 10
+    Pathogenic                                                                  428
+    Pathogenic,_risk_factor                                                       2
+    Pathogenic/Likely_pathogenic                                                 57
+    risk_factor                                                                   2
+    Uncertain_significance                                                     2814
+Query: chrMT:1-690277
+  Total: 2833 variants
+  Catelog:
+    Benign                                                                      914
+    Benign/Likely_benign                                                         30
+    Conflicting_interpretations_of_pathogenicity                                 39
+    drug_response                                                                 4
+    Likely_benign                                                               499
+    Likely_pathogenic                                                           107
+    not_provided                                                                 19
+    Pathogenic                                                                  219
+    Pathogenic/Likely_pathogenic                                                  3
+    Uncertain_significance                                                      999
+Query: chr19:45407053-45414650
+  Total: 58 variants
+  Catelog:
+    Benign                                                                        3
+    Conflicting_interpretations_of_pathogenicity                                  1
+    Conflicting_interpretations_of_pathogenicity,_other,_risk_factor              1
+    drug_response                                                                 4
+    Likely_benign                                                                13
+    Likely_pathogenic                                                             3
+    None                                                                          9
+    not_provided                                                                  3
+    Pathogenic                                                                   16
+    risk_factor                                                                   1
+    Uncertain_significance                                                        4
